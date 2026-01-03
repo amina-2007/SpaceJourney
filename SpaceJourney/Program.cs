@@ -16,7 +16,8 @@ namespace SpaceJourney
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Form Form1 = new Form();
+            Application.Run(new SpaceMenu());
         }
     }
 }

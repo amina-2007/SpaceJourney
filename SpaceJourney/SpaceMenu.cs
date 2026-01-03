@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SpaceJourney
 {
-    public partial class Form1 : Form
+    public partial class SpaceMenu : Form
     {
-        public Form1()
+        public SpaceMenu()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
