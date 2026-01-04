@@ -218,6 +218,7 @@ namespace SpaceJourney
             this.BTNOrderTheJourney.Name = "BTNOrderTheJourney";
             this.BTNOrderTheJourney.Size = new System.Drawing.Size(23, 25);
             this.BTNOrderTheJourney.Text = "toolStripButton1";
+            this.BTNOrderTheJourney.Click += new System.EventHandler(this.BTNOrderTheJourney_Click);
             // 
             // LBLOrderTheJourney
             // 
@@ -231,7 +232,7 @@ namespace SpaceJourney
             // 
             this.BTNPlanetsList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BTNPlanetsList.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BTNPlanetsList.Image = ((System.Drawing.Image)(resources.GetObject("BTNPlanetsList.Image")));
+            this.BTNPlanetsList.Image = global::SpaceJourney.Properties.Resources.btnlisticon;
             this.BTNPlanetsList.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BTNPlanetsList.Name = "BTNPlanetsList";
             this.BTNPlanetsList.Size = new System.Drawing.Size(23, 25);

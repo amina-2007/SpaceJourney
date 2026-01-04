@@ -63,6 +63,16 @@ namespace SpaceJourney.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnlisticon {
+            get {
+                object obj = ResourceManager.GetObject("btnlisticon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap jupiter {
             get {
                 object obj = ResourceManager.GetObject("jupiter", resourceCulture);

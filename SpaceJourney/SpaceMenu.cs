@@ -21,5 +21,11 @@ namespace SpaceJourney
         {
 
         }
+
+        private void BTNOrderTheJourney_Click(object sender, EventArgs e)
+        {//че м show ot showdialog отличается? без диалог можно при открытии новой формы работать с предыдущей а с диалог только с открытой так что либо заказывать поездку либо нажимаьь на кнопку во второй форме чтобы ее закрыть
+            FormOrder order= new FormOrder();
+            order.ShowDialog();
+        }
     }
 }
