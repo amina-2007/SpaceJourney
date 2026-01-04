@@ -213,7 +213,7 @@ namespace SpaceJourney
             this.BTNOrderTheJourney.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BTNOrderTheJourney.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.BTNOrderTheJourney.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BTNOrderTheJourney.Image = ((System.Drawing.Image)(resources.GetObject("BTNOrderTheJourney.Image")));
+            this.BTNOrderTheJourney.Image = global::SpaceJourney.Properties.Resources.btnordericon;
             this.BTNOrderTheJourney.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BTNOrderTheJourney.Name = "BTNOrderTheJourney";
             this.BTNOrderTheJourney.Size = new System.Drawing.Size(23, 25);

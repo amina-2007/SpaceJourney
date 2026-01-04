@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridOrders = new System.Windows.Forms.DataGridView();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSnils = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnRocket = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LBLOrder = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonRus = new System.Windows.Forms.RadioButton();
             this.TXTName = new System.Windows.Forms.TextBox();
             this.btnSumbit = new System.Windows.Forms.Button();
             this.TXTPhone = new System.Windows.Forms.TextBox();
@@ -39,15 +43,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButtonUFO = new System.Windows.Forms.RadioButton();
+            this.radioButtonCarpet = new System.Windows.Forms.RadioButton();
+            this.radioButtonMusk = new System.Windows.Forms.RadioButton();
             this.button2 = new System.Windows.Forms.Button();
             this.labelSomeText = new System.Windows.Forms.Label();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSnils = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnRocket = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonReturnToMenu = new System.Windows.Forms.Button();
             this.BTNSadlySave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridOrders)).BeginInit();
@@ -55,6 +55,8 @@
             // 
             // dataGridOrders
             // 
+            this.dataGridOrders.AllowUserToResizeColumns = false;
+            this.dataGridOrders.AllowUserToResizeRows = false;
             this.dataGridOrders.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dataGridOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridOrders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -69,6 +71,32 @@
             this.dataGridOrders.Size = new System.Drawing.Size(493, 870);
             this.dataGridOrders.TabIndex = 0;
             // 
+            // ColumnName
+            // 
+            this.ColumnName.HeaderText = "ИМЯ";
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.ReadOnly = true;
+            this.ColumnName.Width = 125;
+            // 
+            // ColumnPhone
+            // 
+            this.ColumnPhone.HeaderText = "НОМЕР ТЕЛЕФОНА";
+            this.ColumnPhone.Name = "ColumnPhone";
+            this.ColumnPhone.ReadOnly = true;
+            this.ColumnPhone.Width = 125;
+            // 
+            // ColumnSnils
+            // 
+            this.ColumnSnils.HeaderText = "СНИЛС";
+            this.ColumnSnils.Name = "ColumnSnils";
+            this.ColumnSnils.ReadOnly = true;
+            // 
+            // ColumnRocket
+            // 
+            this.ColumnRocket.HeaderText = "ТИП ТРАНСПОРТА";
+            this.ColumnRocket.Name = "ColumnRocket";
+            this.ColumnRocket.ReadOnly = true;
+            // 
             // LBLOrder
             // 
             this.LBLOrder.AutoSize = true;
@@ -80,18 +108,18 @@
             this.LBLOrder.TabIndex = 1;
             this.LBLOrder.Text = "ОФОРМИТЬ ПОЕЗДКУ";
             // 
-            // radioButton1
+            // radioButtonRus
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.radioButton1.Location = new System.Drawing.Point(686, 436);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(212, 27);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "РАКЕТА ОТЕЧЕСТВЕННАЯ";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonRus.AutoSize = true;
+            this.radioButtonRus.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonRus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.radioButtonRus.Location = new System.Drawing.Point(686, 436);
+            this.radioButtonRus.Name = "radioButtonRus";
+            this.radioButtonRus.Size = new System.Drawing.Size(212, 27);
+            this.radioButtonRus.TabIndex = 2;
+            this.radioButtonRus.TabStop = true;
+            this.radioButtonRus.Text = "РАКЕТА ОТЕЧЕСТВЕННАЯ";
+            this.radioButtonRus.UseVisualStyleBackColor = true;
             // 
             // TXTName
             // 
@@ -99,6 +127,7 @@
             this.TXTName.Name = "TXTName";
             this.TXTName.Size = new System.Drawing.Size(310, 20);
             this.TXTName.TabIndex = 3;
+            this.TXTName.TextChanged += new System.EventHandler(this.TXTName_TextChanged);
             // 
             // btnSumbit
             // 
@@ -110,6 +139,7 @@
             this.btnSumbit.TabIndex = 4;
             this.btnSumbit.Text = "ЗАКАЗАТЬ";
             this.btnSumbit.UseVisualStyleBackColor = false;
+            this.btnSumbit.Click += new System.EventHandler(this.btnSumbit_Click);
             // 
             // TXTPhone
             // 
@@ -117,6 +147,7 @@
             this.TXTPhone.Name = "TXTPhone";
             this.TXTPhone.Size = new System.Drawing.Size(310, 20);
             this.TXTPhone.TabIndex = 5;
+            this.TXTPhone.TextChanged += new System.EventHandler(this.TXTPhone_TextChanged);
             // 
             // TXTSnils
             // 
@@ -124,6 +155,7 @@
             this.TXTSnils.Name = "TXTSnils";
             this.TXTSnils.Size = new System.Drawing.Size(310, 20);
             this.TXTSnils.TabIndex = 6;
+            this.TXTSnils.TextChanged += new System.EventHandler(this.TXTSnils_TextChanged);
             // 
             // labelName
             // 
@@ -169,44 +201,44 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "ТИП ТРАНСПОРТА";
             // 
-            // radioButton2
+            // radioButtonUFO
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.radioButton2.Location = new System.Drawing.Point(911, 436);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(60, 27);
-            this.radioButton2.TabIndex = 11;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "НЛО";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonUFO.AutoSize = true;
+            this.radioButtonUFO.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonUFO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.radioButtonUFO.Location = new System.Drawing.Point(911, 436);
+            this.radioButtonUFO.Name = "radioButtonUFO";
+            this.radioButtonUFO.Size = new System.Drawing.Size(60, 27);
+            this.radioButtonUFO.TabIndex = 11;
+            this.radioButtonUFO.TabStop = true;
+            this.radioButtonUFO.Text = "НЛО";
+            this.radioButtonUFO.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radioButtonCarpet
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.radioButton3.Location = new System.Drawing.Point(686, 499);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(89, 27);
-            this.radioButton3.TabIndex = 12;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "КОВРИК";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButtonCarpet.AutoSize = true;
+            this.radioButtonCarpet.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonCarpet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.radioButtonCarpet.Location = new System.Drawing.Point(686, 499);
+            this.radioButtonCarpet.Name = "radioButtonCarpet";
+            this.radioButtonCarpet.Size = new System.Drawing.Size(89, 27);
+            this.radioButtonCarpet.TabIndex = 12;
+            this.radioButtonCarpet.TabStop = true;
+            this.radioButtonCarpet.Text = "КОВРИК";
+            this.radioButtonCarpet.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // radioButtonMusk
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.radioButton4.Location = new System.Drawing.Point(911, 499);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(85, 27);
-            this.radioButton4.TabIndex = 13;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "SPACEX";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButtonMusk.AutoSize = true;
+            this.radioButtonMusk.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonMusk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.radioButtonMusk.Location = new System.Drawing.Point(911, 499);
+            this.radioButtonMusk.Name = "radioButtonMusk";
+            this.radioButtonMusk.Size = new System.Drawing.Size(85, 27);
+            this.radioButtonMusk.TabIndex = 13;
+            this.radioButtonMusk.TabStop = true;
+            this.radioButtonMusk.Text = "SPACEX";
+            this.radioButtonMusk.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -218,6 +250,7 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "ПЕРЕДУМАТЬ";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // labelSomeText
             // 
@@ -226,35 +259,9 @@
             this.labelSomeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.labelSomeText.Location = new System.Drawing.Point(687, 760);
             this.labelSomeText.Name = "labelSomeText";
-            this.labelSomeText.Size = new System.Drawing.Size(50, 29);
+            this.labelSomeText.Size = new System.Drawing.Size(17, 29);
             this.labelSomeText.TabIndex = 15;
-            this.labelSomeText.Text = "test";
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.HeaderText = "ИМЯ";
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.ReadOnly = true;
-            this.ColumnName.Width = 125;
-            // 
-            // ColumnPhone
-            // 
-            this.ColumnPhone.HeaderText = "НОМЕР ТЕЛЕФОНА";
-            this.ColumnPhone.Name = "ColumnPhone";
-            this.ColumnPhone.ReadOnly = true;
-            this.ColumnPhone.Width = 125;
-            // 
-            // ColumnSnils
-            // 
-            this.ColumnSnils.HeaderText = "СНИЛС";
-            this.ColumnSnils.Name = "ColumnSnils";
-            this.ColumnSnils.ReadOnly = true;
-            // 
-            // ColumnRocket
-            // 
-            this.ColumnRocket.HeaderText = "ТИП ТРАНСПОРТА";
-            this.ColumnRocket.Name = "ColumnRocket";
-            this.ColumnRocket.ReadOnly = true;
+            this.labelSomeText.Text = " ";
             // 
             // buttonReturnToMenu
             // 
@@ -289,9 +296,9 @@
             this.Controls.Add(this.buttonReturnToMenu);
             this.Controls.Add(this.labelSomeText);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButtonMusk);
+            this.Controls.Add(this.radioButtonCarpet);
+            this.Controls.Add(this.radioButtonUFO);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -300,7 +307,7 @@
             this.Controls.Add(this.TXTPhone);
             this.Controls.Add(this.btnSumbit);
             this.Controls.Add(this.TXTName);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonRus);
             this.Controls.Add(this.LBLOrder);
             this.Controls.Add(this.dataGridOrders);
             this.Name = "FormOrder";
@@ -315,7 +322,7 @@
 
         private System.Windows.Forms.DataGridView dataGridOrders;
         private System.Windows.Forms.Label LBLOrder;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButtonRus;
         private System.Windows.Forms.TextBox TXTName;
         private System.Windows.Forms.Button btnSumbit;
         private System.Windows.Forms.TextBox TXTPhone;
@@ -324,9 +331,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButtonUFO;
+        private System.Windows.Forms.RadioButton radioButtonCarpet;
+        private System.Windows.Forms.RadioButton radioButtonMusk;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPhone;

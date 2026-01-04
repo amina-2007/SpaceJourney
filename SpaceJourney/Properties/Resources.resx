@@ -136,6 +136,9 @@
   <data name="sun" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btnlisticon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnlisticon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="venus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\venus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,7 +148,7 @@
   <data name="neptune" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\neptune.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnlisticon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnlisticon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnordericon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnordericon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
