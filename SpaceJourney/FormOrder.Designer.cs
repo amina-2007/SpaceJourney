@@ -50,6 +50,8 @@
             this.labelSomeText = new System.Windows.Forms.Label();
             this.buttonReturnToMenu = new System.Windows.Forms.Button();
             this.BTNSadlySave = new System.Windows.Forms.Button();
+            this.buttonSadlyLoad = new System.Windows.Forms.Button();
+            this.buttonEraseFromGrid = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridOrders)).BeginInit();
             this.SuspendLayout();
             // 
@@ -279,12 +281,35 @@
             // 
             this.BTNSadlySave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BTNSadlySave.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BTNSadlySave.Location = new System.Drawing.Point(686, 665);
+            this.BTNSadlySave.Location = new System.Drawing.Point(686, 614);
             this.BTNSadlySave.Name = "BTNSadlySave";
             this.BTNSadlySave.Size = new System.Drawing.Size(128, 40);
             this.BTNSadlySave.TabIndex = 17;
             this.BTNSadlySave.Text = "СОХРАНИТЬ";
             this.BTNSadlySave.UseVisualStyleBackColor = false;
+            // 
+            // buttonSadlyLoad
+            // 
+            this.buttonSadlyLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonSadlyLoad.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSadlyLoad.Location = new System.Drawing.Point(686, 665);
+            this.buttonSadlyLoad.Name = "buttonSadlyLoad";
+            this.buttonSadlyLoad.Size = new System.Drawing.Size(128, 40);
+            this.buttonSadlyLoad.TabIndex = 18;
+            this.buttonSadlyLoad.Text = "ЗАГРУЗИТЬ";
+            this.buttonSadlyLoad.UseVisualStyleBackColor = false;
+            // 
+            // buttonEraseFromGrid
+            // 
+            this.buttonEraseFromGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonEraseFromGrid.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEraseFromGrid.Location = new System.Drawing.Point(868, 614);
+            this.buttonEraseFromGrid.Name = "buttonEraseFromGrid";
+            this.buttonEraseFromGrid.Size = new System.Drawing.Size(128, 40);
+            this.buttonEraseFromGrid.TabIndex = 19;
+            this.buttonEraseFromGrid.Text = "УДАЛИТЬ";
+            this.buttonEraseFromGrid.UseVisualStyleBackColor = false;
+            this.buttonEraseFromGrid.Click += new System.EventHandler(this.buttonEraseFromGrid_Click);
             // 
             // FormOrder
             // 
@@ -292,6 +317,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1108, 894);
+            this.Controls.Add(this.buttonEraseFromGrid);
+            this.Controls.Add(this.buttonSadlyLoad);
             this.Controls.Add(this.BTNSadlySave);
             this.Controls.Add(this.buttonReturnToMenu);
             this.Controls.Add(this.labelSomeText);
@@ -342,5 +369,7 @@
         private System.Windows.Forms.Label labelSomeText;
         private System.Windows.Forms.Button buttonReturnToMenu;
         private System.Windows.Forms.Button BTNSadlySave;
+        private System.Windows.Forms.Button buttonSadlyLoad;
+        private System.Windows.Forms.Button buttonEraseFromGrid;
     }
 }

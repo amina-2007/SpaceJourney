@@ -71,6 +71,12 @@ namespace SpaceJourney
         private void btnSumbit_Click(object sender, EventArgs e)
         {
             if (AllEntered() == false) { labelSomeText.Text = "Заполните все поля\n или никуда не полетите."; return; }
+
+            else if(  IsRepeating(TXTName.Text, TXTPhone.Text, TXTSnils.Text, RBValue())          )
+            {
+                labelSomeText.Text = "НЕТ! Нельзя повторяться."; return ;
+            }
+
             else
             {
                 labelSomeText.Text = "Ок, данные занесены!";
@@ -78,6 +84,27 @@ namespace SpaceJourney
                 dataGridOrders.Rows.Add(TXTName.Text, TXTPhone.Text, TXTSnils.Text, RBValue());
             }
         }
+
+        private bool IsRepeating(string name, string phone, string snils, string select)
+        {//можно юыло проверять пустая ли строка, но если добавление через кнопку, то если пренебречь, ничего не потеряем
+            foreach (DataGridViewRow row in dataGridOrders.Rows)
+            {  //без вопростельного знака выскакивала ошибка ссылка на экземпляр не указывает на обьект. ? это нулевой оператор короче проверка на ноль короче работает не трогай
+                
+                string inputedName = row.Cells["ColumnName"].Value?.ToString();
+                string inputedPhone = row.Cells["ColumnPhone"].Value?.ToString();
+                string inputedSnils = row.Cells["ColumnSnils"].Value?.ToString();
+                string inputedRBT= row.Cells["ColumnRocket"].Value?.ToString();
+
+                if(name==inputedName && phone==inputedPhone && snils==inputedSnils&&  select==inputedRBT) { return true; }
+                
+
+            }
+            return false;
+        }
+
+
+
+
         //ну просто значение передает
         private string RBValue()
         {
@@ -107,6 +134,20 @@ namespace SpaceJourney
             if (!rbtChecked) { return false; }
 
             return true;
+        }
+
+        private void buttonEraseFromGrid_Click(object sender, EventArgs e)
+        {//все очень просто в плане того что даже не возникнет проблемы что пользователь захочет отдельно кусок колонки в строке удалить ибо ЗАЧЕМ 
+            //плюс чтобы за раз не сносил всю таюлицу 
+            if(dataGridOrders.SelectedRows.Count ==1)
+
+            {
+                dataGridOrders.Rows.Remove(dataGridOrders.SelectedRows[0]);
+            }
+            else
+            {
+                labelSomeText.Text = "За раз удалить можно \nтолько одну строку.\n Кликаем левый столбец! ";
+            }
         }
     }
 }
