@@ -59,7 +59,7 @@ namespace SpaceJourney.Properties {
                 resourceCulture = value;
             }
         }
-        
+        //ЦИРКОВОЙ НОМЕР: ручеая инициализация изображений которые я добавила но которые тут не сгенерировались
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
