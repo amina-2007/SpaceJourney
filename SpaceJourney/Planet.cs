@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace SpaceJourney
 {
-    internal class Planet:IPlanet
+    public class Planet:IPlanet
     {
       public  string PlanetName { get; set; }
         public string PlanetInfo { get; set; }
@@ -17,12 +17,15 @@ namespace SpaceJourney
         public double OrbitSpeed { get; set; } //не путать это вокруг солнца ниже вокруг своей оси
         public double RotateSpeed { get; set; }
         //комментарии человеческие все
-        public Planet(string name, string info, double ospeed, double rspeed)
+        public Planet(string name, string info, double ospeed, double rspeed, Image fst, Image lst, Image sur)
         {//зачем нужен this? он указывает именно на поля класса если  вроде принимаемые значения в конструкторе так же называются то без него может быть ошибка эээ
             this.PlanetName = name;
            this.PlanetInfo = info;
            this. OrbitSpeed = ospeed;
             this.RotateSpeed = rspeed;
+            this.FirstPlanetImage = fst;
+            this.LastPlanetImage = lst;
+            this.PlanetSurfaceImage = sur;
         }
     }
 }

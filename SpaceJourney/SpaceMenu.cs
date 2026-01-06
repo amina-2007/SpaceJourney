@@ -27,5 +27,12 @@ namespace SpaceJourney
             FormOrder order= new FormOrder();
             order.ShowDialog();
         }
+
+        private void BTNMercury_Click(object sender, EventArgs e)
+        {
+            Planet mercury = new Planet("TEST", "FUCKFUCKFUCKFUCL", 22, 222, Properties.Resources.frst, Properties.Resources.neptune, Properties.Resources.neptune);
+            PlanetInfoForm planetInfo = new PlanetInfoForm(mercury);
+            planetInfo.ShowDialog();
+        }
     }
 }

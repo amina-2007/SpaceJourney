@@ -52,6 +52,13 @@
     <Compile Include="FormOrder.Designer.cs">
       <DependentUpon>FormOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order.cs" />
+    <Compile Include="PlanetInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanetInfoForm.Designer.cs">
+      <DependentUpon>PlanetInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SpaceMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +71,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormOrder.resx">
       <DependentUpon>FormOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanetInfoForm.resx">
+      <DependentUpon>PlanetInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SpaceMenu.resx">
       <DependentUpon>SpaceMenu.cs</DependentUpon>
@@ -123,6 +133,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="orderdata.txt" />
+    <Content Include="Resources\FRSTearth.png" />
+    <Content Include="Resources\FRSTjupiter.png" />
+    <Content Include="Resources\FRSTmars.png" />
+    <Content Include="Resources\FRSTmercury.png" />
+    <Content Include="Resources\FRSTneptune.png" />
+    <Content Include="Resources\FRSTsaturn.png" />
+    <Content Include="Resources\FRSTuranus.png" />
+    <Content Include="Resources\FRSTvenus.png" />
+    <Content Include="Resources\LASTearth.png" />
+    <Content Include="Resources\LASTjupiter.png" />
+    <Content Include="Resources\LASTmars.png" />
+    <Content Include="Resources\LASTmercury.png" />
+    <Content Include="Resources\LASTneptune.png" />
+    <Content Include="Resources\LASTsaturn.png" />
+    <Content Include="Resources\LASTuranus.png" />
+    <Content Include="Resources\LASTvenus.png" />
+    <Content Include="Resources\SURearth.png" />
+    <Content Include="Resources\SURjupiter.png" />
+    <Content Include="Resources\SURmars.png" />
+    <Content Include="Resources\SURmercury.png" />
+    <Content Include="Resources\SURneptune.png" />
+    <Content Include="Resources\SURsaturn.png" />
+    <Content Include="Resources\SURuranus.png" />
+    <Content Include="Resources\SURvenus.png" />
     <None Include="Resources\btnordericon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -52,6 +52,9 @@
             this.BTNSadlySave = new System.Windows.Forms.Button();
             this.buttonSadlyLoad = new System.Windows.Forms.Button();
             this.buttonEraseFromGrid = new System.Windows.Forms.Button();
+            this.comboBoxPlanets = new System.Windows.Forms.ComboBox();
+            this.labelChosenPlaned = new System.Windows.Forms.Label();
+            this.ColumnPlanet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridOrders)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,12 +68,13 @@
             this.ColumnName,
             this.ColumnPhone,
             this.ColumnSnils,
-            this.ColumnRocket});
+            this.ColumnRocket,
+            this.ColumnPlanet});
             this.dataGridOrders.GridColor = System.Drawing.Color.Black;
             this.dataGridOrders.Location = new System.Drawing.Point(12, 12);
             this.dataGridOrders.Name = "dataGridOrders";
             this.dataGridOrders.ReadOnly = true;
-            this.dataGridOrders.Size = new System.Drawing.Size(493, 870);
+            this.dataGridOrders.Size = new System.Drawing.Size(591, 870);
             this.dataGridOrders.TabIndex = 0;
             // 
             // ColumnName
@@ -115,7 +119,7 @@
             this.radioButtonRus.AutoSize = true;
             this.radioButtonRus.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButtonRus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.radioButtonRus.Location = new System.Drawing.Point(686, 436);
+            this.radioButtonRus.Location = new System.Drawing.Point(686, 382);
             this.radioButtonRus.Name = "radioButtonRus";
             this.radioButtonRus.Size = new System.Drawing.Size(212, 27);
             this.radioButtonRus.TabIndex = 2;
@@ -135,7 +139,7 @@
             // 
             this.btnSumbit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnSumbit.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSumbit.Location = new System.Drawing.Point(686, 568);
+            this.btnSumbit.Location = new System.Drawing.Point(680, 573);
             this.btnSumbit.Name = "btnSumbit";
             this.btnSumbit.Size = new System.Drawing.Size(128, 40);
             this.btnSumbit.TabIndex = 4;
@@ -145,7 +149,7 @@
             // 
             // TXTPhone
             // 
-            this.TXTPhone.Location = new System.Drawing.Point(686, 208);
+            this.TXTPhone.Location = new System.Drawing.Point(686, 203);
             this.TXTPhone.Name = "TXTPhone";
             this.TXTPhone.Size = new System.Drawing.Size(310, 20);
             this.TXTPhone.TabIndex = 5;
@@ -153,7 +157,7 @@
             // 
             // TXTSnils
             // 
-            this.TXTSnils.Location = new System.Drawing.Point(686, 304);
+            this.TXTSnils.Location = new System.Drawing.Point(686, 288);
             this.TXTSnils.Name = "TXTSnils";
             this.TXTSnils.Size = new System.Drawing.Size(310, 20);
             this.TXTSnils.TabIndex = 6;
@@ -175,7 +179,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(681, 176);
+            this.label2.Location = new System.Drawing.Point(681, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(184, 29);
             this.label2.TabIndex = 8;
@@ -186,7 +190,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(681, 272);
+            this.label3.Location = new System.Drawing.Point(681, 256);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 29);
             this.label3.TabIndex = 9;
@@ -197,7 +201,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(681, 370);
+            this.label4.Location = new System.Drawing.Point(681, 340);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(176, 29);
             this.label4.TabIndex = 10;
@@ -208,7 +212,7 @@
             this.radioButtonUFO.AutoSize = true;
             this.radioButtonUFO.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButtonUFO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.radioButtonUFO.Location = new System.Drawing.Point(911, 436);
+            this.radioButtonUFO.Location = new System.Drawing.Point(911, 382);
             this.radioButtonUFO.Name = "radioButtonUFO";
             this.radioButtonUFO.Size = new System.Drawing.Size(60, 27);
             this.radioButtonUFO.TabIndex = 11;
@@ -221,7 +225,7 @@
             this.radioButtonCarpet.AutoSize = true;
             this.radioButtonCarpet.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButtonCarpet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.radioButtonCarpet.Location = new System.Drawing.Point(686, 499);
+            this.radioButtonCarpet.Location = new System.Drawing.Point(686, 445);
             this.radioButtonCarpet.Name = "radioButtonCarpet";
             this.radioButtonCarpet.Size = new System.Drawing.Size(89, 27);
             this.radioButtonCarpet.TabIndex = 12;
@@ -234,7 +238,7 @@
             this.radioButtonMusk.AutoSize = true;
             this.radioButtonMusk.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButtonMusk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.radioButtonMusk.Location = new System.Drawing.Point(911, 499);
+            this.radioButtonMusk.Location = new System.Drawing.Point(911, 445);
             this.radioButtonMusk.Name = "radioButtonMusk";
             this.radioButtonMusk.Size = new System.Drawing.Size(85, 27);
             this.radioButtonMusk.TabIndex = 13;
@@ -246,7 +250,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button2.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(868, 568);
+            this.button2.Location = new System.Drawing.Point(862, 573);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(128, 40);
             this.button2.TabIndex = 14;
@@ -269,7 +273,7 @@
             // 
             this.buttonReturnToMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonReturnToMenu.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonReturnToMenu.Location = new System.Drawing.Point(868, 665);
+            this.buttonReturnToMenu.Location = new System.Drawing.Point(862, 670);
             this.buttonReturnToMenu.Name = "buttonReturnToMenu";
             this.buttonReturnToMenu.Size = new System.Drawing.Size(128, 40);
             this.buttonReturnToMenu.TabIndex = 16;
@@ -281,7 +285,7 @@
             // 
             this.BTNSadlySave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BTNSadlySave.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BTNSadlySave.Location = new System.Drawing.Point(686, 614);
+            this.BTNSadlySave.Location = new System.Drawing.Point(680, 619);
             this.BTNSadlySave.Name = "BTNSadlySave";
             this.BTNSadlySave.Size = new System.Drawing.Size(128, 40);
             this.BTNSadlySave.TabIndex = 17;
@@ -292,7 +296,7 @@
             // 
             this.buttonSadlyLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonSadlyLoad.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSadlyLoad.Location = new System.Drawing.Point(686, 665);
+            this.buttonSadlyLoad.Location = new System.Drawing.Point(680, 670);
             this.buttonSadlyLoad.Name = "buttonSadlyLoad";
             this.buttonSadlyLoad.Size = new System.Drawing.Size(128, 40);
             this.buttonSadlyLoad.TabIndex = 18;
@@ -303,7 +307,7 @@
             // 
             this.buttonEraseFromGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonEraseFromGrid.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEraseFromGrid.Location = new System.Drawing.Point(868, 614);
+            this.buttonEraseFromGrid.Location = new System.Drawing.Point(862, 619);
             this.buttonEraseFromGrid.Name = "buttonEraseFromGrid";
             this.buttonEraseFromGrid.Size = new System.Drawing.Size(128, 40);
             this.buttonEraseFromGrid.TabIndex = 19;
@@ -311,12 +315,49 @@
             this.buttonEraseFromGrid.UseVisualStyleBackColor = false;
             this.buttonEraseFromGrid.Click += new System.EventHandler(this.buttonEraseFromGrid_Click);
             // 
+            // comboBoxPlanets
+            // 
+            this.comboBoxPlanets.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPlanets.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxPlanets.Items.AddRange(new object[] {
+            "Меркурий",
+            "Венера",
+            "Земля",
+            "Марс",
+            "Юпитер",
+            "Сатурн",
+            "Уран",
+            "Нептун"});
+            this.comboBoxPlanets.Location = new System.Drawing.Point(680, 522);
+            this.comboBoxPlanets.Name = "comboBoxPlanets";
+            this.comboBoxPlanets.Size = new System.Drawing.Size(310, 34);
+            this.comboBoxPlanets.TabIndex = 20;
+            // 
+            // labelChosenPlaned
+            // 
+            this.labelChosenPlaned.AutoSize = true;
+            this.labelChosenPlaned.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelChosenPlaned.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelChosenPlaned.Location = new System.Drawing.Point(675, 490);
+            this.labelChosenPlaned.Name = "labelChosenPlaned";
+            this.labelChosenPlaned.Size = new System.Drawing.Size(223, 29);
+            this.labelChosenPlaned.TabIndex = 21;
+            this.labelChosenPlaned.Text = "ВЫБРАННАЯ ПЛАНЕТА";
+            // 
+            // ColumnPlanet
+            // 
+            this.ColumnPlanet.HeaderText = "ПЛАНЕТА";
+            this.ColumnPlanet.Name = "ColumnPlanet";
+            this.ColumnPlanet.ReadOnly = true;
+            // 
             // FormOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1108, 894);
+            this.ClientSize = new System.Drawing.Size(1049, 894);
+            this.Controls.Add(this.labelChosenPlaned);
+            this.Controls.Add(this.comboBoxPlanets);
             this.Controls.Add(this.buttonEraseFromGrid);
             this.Controls.Add(this.buttonSadlyLoad);
             this.Controls.Add(this.BTNSadlySave);
@@ -371,5 +412,8 @@
         private System.Windows.Forms.Button BTNSadlySave;
         private System.Windows.Forms.Button buttonSadlyLoad;
         private System.Windows.Forms.Button buttonEraseFromGrid;
+        private System.Windows.Forms.ComboBox comboBoxPlanets;
+        private System.Windows.Forms.Label labelChosenPlaned;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPlanet;
     }
 }

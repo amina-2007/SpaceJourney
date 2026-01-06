@@ -46,14 +46,6 @@ namespace SpaceJourney
             this.LBLOrderTheJourney = new System.Windows.Forms.ToolStripLabel();
             this.BTNPlanetsList = new System.Windows.Forms.ToolStripButton();
             this.LBLPlanetsList = new System.Windows.Forms.ToolStripLabel();
-            this.BTNGenerateYours = new System.Windows.Forms.ToolStripButton();
-            this.LBLGenerateYours = new System.Windows.Forms.ToolStripLabel();
-            this.BTNSaveToFile = new System.Windows.Forms.ToolStripButton();
-            this.LBLSaveToFile = new System.Windows.Forms.ToolStripLabel();
-            this.BTNLoadFile = new System.Windows.Forms.ToolStripButton();
-            this.LBLLoadFile = new System.Windows.Forms.ToolStripLabel();
-            this.BTNClear = new System.Windows.Forms.ToolStripButton();
-            this.LBLClear = new System.Windows.Forms.ToolStripLabel();
             this.cekyndomep = new System.Windows.Forms.Timer(this.components);
             this.toolStripMainMenu.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +77,7 @@ namespace SpaceJourney
             this.BTNMercury.TabIndex = 1;
             this.BTNMercury.Text = " ";
             this.BTNMercury.UseVisualStyleBackColor = false;
+            this.BTNMercury.Click += new System.EventHandler(this.BTNMercury_Click);
             // 
             // BTNEarth
             // 
@@ -193,15 +186,7 @@ namespace SpaceJourney
             this.BTNOrderTheJourney,
             this.LBLOrderTheJourney,
             this.BTNPlanetsList,
-            this.LBLPlanetsList,
-            this.BTNGenerateYours,
-            this.LBLGenerateYours,
-            this.BTNSaveToFile,
-            this.LBLSaveToFile,
-            this.BTNLoadFile,
-            this.LBLLoadFile,
-            this.BTNClear,
-            this.LBLClear});
+            this.LBLPlanetsList});
             this.toolStripMainMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMainMenu.Name = "toolStripMainMenu";
             this.toolStripMainMenu.Size = new System.Drawing.Size(1518, 28);
@@ -244,74 +229,6 @@ namespace SpaceJourney
             this.LBLPlanetsList.Name = "LBLPlanetsList";
             this.LBLPlanetsList.Size = new System.Drawing.Size(143, 25);
             this.LBLPlanetsList.Text = "СПИСОК ПЛАНЕТ";
-            // 
-            // BTNGenerateYours
-            // 
-            this.BTNGenerateYours.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.BTNGenerateYours.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BTNGenerateYours.Image = ((System.Drawing.Image)(resources.GetObject("BTNGenerateYours.Image")));
-            this.BTNGenerateYours.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BTNGenerateYours.Name = "BTNGenerateYours";
-            this.BTNGenerateYours.Size = new System.Drawing.Size(23, 25);
-            this.BTNGenerateYours.Text = "toolStripButton3";
-            // 
-            // LBLGenerateYours
-            // 
-            this.LBLGenerateYours.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.LBLGenerateYours.Name = "LBLGenerateYours";
-            this.LBLGenerateYours.Size = new System.Drawing.Size(269, 25);
-            this.LBLGenerateYours.Text = "НАДЕЮСЬ НЕ СОЗДАТЬ ПЛАНЕТУ";
-            // 
-            // BTNSaveToFile
-            // 
-            this.BTNSaveToFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.BTNSaveToFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BTNSaveToFile.Image = ((System.Drawing.Image)(resources.GetObject("BTNSaveToFile.Image")));
-            this.BTNSaveToFile.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BTNSaveToFile.Name = "BTNSaveToFile";
-            this.BTNSaveToFile.Size = new System.Drawing.Size(23, 25);
-            this.BTNSaveToFile.Text = "toolStripButton4";
-            // 
-            // LBLSaveToFile
-            // 
-            this.LBLSaveToFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.LBLSaveToFile.Name = "LBLSaveToFile";
-            this.LBLSaveToFile.Size = new System.Drawing.Size(263, 25);
-            this.LBLSaveToFile.Text = "ТОЛЬЕО НЕ СОХРАНИТЬ В ФАЙЛ";
-            // 
-            // BTNLoadFile
-            // 
-            this.BTNLoadFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.BTNLoadFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BTNLoadFile.Image = ((System.Drawing.Image)(resources.GetObject("BTNLoadFile.Image")));
-            this.BTNLoadFile.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BTNLoadFile.Name = "BTNLoadFile";
-            this.BTNLoadFile.Size = new System.Drawing.Size(23, 25);
-            this.BTNLoadFile.Text = "toolStripButton1";
-            // 
-            // LBLLoadFile
-            // 
-            this.LBLLoadFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.LBLLoadFile.Name = "LBLLoadFile";
-            this.LBLLoadFile.Size = new System.Drawing.Size(340, 25);
-            this.LBLLoadFile.Text = "я не буду делать ЗАГРУЗИТЬ ИЗ ФАЙЛА";
-            // 
-            // BTNClear
-            // 
-            this.BTNClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.BTNClear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BTNClear.Image = ((System.Drawing.Image)(resources.GetObject("BTNClear.Image")));
-            this.BTNClear.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BTNClear.Name = "BTNClear";
-            this.BTNClear.Size = new System.Drawing.Size(23, 25);
-            this.BTNClear.Text = "toolStripButton1";
-            // 
-            // LBLClear
-            // 
-            this.LBLClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.LBLClear.Name = "LBLClear";
-            this.LBLClear.Size = new System.Drawing.Size(107, 25);
-            this.LBLClear.Text = "ВСЕ СНЕСТИ";
             // 
             // SpaceMenu
             // 
@@ -357,14 +274,6 @@ namespace SpaceJourney
         private System.Windows.Forms.ToolStripLabel LBLOrderTheJourney;
         private System.Windows.Forms.ToolStripButton BTNPlanetsList;
         private System.Windows.Forms.ToolStripLabel LBLPlanetsList;
-        private System.Windows.Forms.ToolStripButton BTNGenerateYours;
-        private System.Windows.Forms.ToolStripLabel LBLGenerateYours;
-        private System.Windows.Forms.ToolStripButton BTNSaveToFile;
-        private System.Windows.Forms.ToolStripLabel LBLSaveToFile;
-        private System.Windows.Forms.ToolStripButton BTNLoadFile;
-        private System.Windows.Forms.ToolStripLabel LBLLoadFile;
-        private System.Windows.Forms.ToolStripButton BTNClear;
-        private System.Windows.Forms.ToolStripLabel LBLClear;
         private System.Windows.Forms.Timer cekyndomep;
     }
 }
