@@ -38,18 +38,18 @@ namespace SpaceJourney
             this.ColumnSPlanet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelCHPlanet = new System.Windows.Forms.Label();
             this.RTBPlanetInfo = new System.Windows.Forms.RichTextBox();
-            this.pictureBoxFirstImage = new System.Windows.Forms.PictureBox();
-            this.pictureBoxLastImage = new System.Windows.Forms.PictureBox();
-            this.pictureBoxSurface = new System.Windows.Forms.PictureBox();
             this.labelFirstImage = new System.Windows.Forms.Label();
             this.labelLastImage = new System.Windows.Forms.Label();
             this.labelSurfaceImage = new System.Windows.Forms.Label();
             this.buttonOkPonyatno = new System.Windows.Forms.Button();
             this.labelOrderCount = new System.Windows.Forms.Label();
+            this.pictureBoxSurface = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLastImage = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFirstImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPlanetInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFirstImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLastImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSurface)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLastImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFirstImage)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridPlanetInfo
@@ -125,36 +125,6 @@ namespace SpaceJourney
             this.RTBPlanetInfo.TabIndex = 2;
             this.RTBPlanetInfo.Text = "";
             // 
-            // pictureBoxFirstImage
-            // 
-            this.pictureBoxFirstImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxFirstImage.Location = new System.Drawing.Point(609, 44);
-            this.pictureBoxFirstImage.Name = "pictureBoxFirstImage";
-            this.pictureBoxFirstImage.Size = new System.Drawing.Size(287, 179);
-            this.pictureBoxFirstImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxFirstImage.TabIndex = 3;
-            this.pictureBoxFirstImage.TabStop = false;
-            // 
-            // pictureBoxLastImage
-            // 
-            this.pictureBoxLastImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxLastImage.Location = new System.Drawing.Point(609, 328);
-            this.pictureBoxLastImage.Name = "pictureBoxLastImage";
-            this.pictureBoxLastImage.Size = new System.Drawing.Size(287, 179);
-            this.pictureBoxLastImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLastImage.TabIndex = 4;
-            this.pictureBoxLastImage.TabStop = false;
-            // 
-            // pictureBoxSurface
-            // 
-            this.pictureBoxSurface.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxSurface.Location = new System.Drawing.Point(609, 671);
-            this.pictureBoxSurface.Name = "pictureBoxSurface";
-            this.pictureBoxSurface.Size = new System.Drawing.Size(287, 179);
-            this.pictureBoxSurface.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxSurface.TabIndex = 5;
-            this.pictureBoxSurface.TabStop = false;
-            // 
             // labelFirstImage
             // 
             this.labelFirstImage.AutoSize = true;
@@ -199,6 +169,7 @@ namespace SpaceJourney
             this.buttonOkPonyatno.TabIndex = 9;
             this.buttonOkPonyatno.Text = "ОК, ПОНЯТНО";
             this.buttonOkPonyatno.UseVisualStyleBackColor = false;
+            this.buttonOkPonyatno.Click += new System.EventHandler(this.buttonOkPonyatno_Click);
             // 
             // labelOrderCount
             // 
@@ -210,6 +181,36 @@ namespace SpaceJourney
             this.labelOrderCount.Size = new System.Drawing.Size(278, 29);
             this.labelOrderCount.TabIndex = 10;
             this.labelOrderCount.Text = "ЗАКАЗАЛО ПОЕЗДКУ СЮДА:";
+            // 
+            // pictureBoxSurface
+            // 
+            this.pictureBoxSurface.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxSurface.Location = new System.Drawing.Point(609, 671);
+            this.pictureBoxSurface.Name = "pictureBoxSurface";
+            this.pictureBoxSurface.Size = new System.Drawing.Size(287, 179);
+            this.pictureBoxSurface.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxSurface.TabIndex = 5;
+            this.pictureBoxSurface.TabStop = false;
+            // 
+            // pictureBoxLastImage
+            // 
+            this.pictureBoxLastImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLastImage.Location = new System.Drawing.Point(609, 328);
+            this.pictureBoxLastImage.Name = "pictureBoxLastImage";
+            this.pictureBoxLastImage.Size = new System.Drawing.Size(287, 179);
+            this.pictureBoxLastImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLastImage.TabIndex = 4;
+            this.pictureBoxLastImage.TabStop = false;
+            // 
+            // pictureBoxFirstImage
+            // 
+            this.pictureBoxFirstImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxFirstImage.Location = new System.Drawing.Point(609, 44);
+            this.pictureBoxFirstImage.Name = "pictureBoxFirstImage";
+            this.pictureBoxFirstImage.Size = new System.Drawing.Size(287, 179);
+            this.pictureBoxFirstImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFirstImage.TabIndex = 3;
+            this.pictureBoxFirstImage.TabStop = false;
             // 
             // PlanetInfoForm
             // 
@@ -232,9 +233,9 @@ namespace SpaceJourney
             this.Text = "PlanetInfoForm";
             this.Load += new System.EventHandler(this.PlanetInfoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPlanetInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFirstImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLastImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSurface)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLastImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFirstImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

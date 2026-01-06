@@ -63,6 +63,7 @@ namespace SpaceJourney
             this.BTNSun.TabIndex = 0;
             this.BTNSun.Text = " ";
             this.BTNSun.UseVisualStyleBackColor = false;
+            this.BTNSun.Click += new System.EventHandler(this.BTNSun_Click);
             // 
             // BTNMercury
             // 
@@ -92,6 +93,7 @@ namespace SpaceJourney
             this.BTNEarth.TabIndex = 2;
             this.BTNEarth.Text = " ";
             this.BTNEarth.UseVisualStyleBackColor = false;
+            this.BTNEarth.Click += new System.EventHandler(this.BTNEarth_Click);
             // 
             // BTNJupiter
             // 
@@ -106,6 +108,7 @@ namespace SpaceJourney
             this.BTNJupiter.TabIndex = 3;
             this.BTNJupiter.Text = " ";
             this.BTNJupiter.UseVisualStyleBackColor = false;
+            this.BTNJupiter.Click += new System.EventHandler(this.BTNJupiter_Click);
             // 
             // BTNMars
             // 
@@ -120,6 +123,7 @@ namespace SpaceJourney
             this.BTNMars.TabIndex = 4;
             this.BTNMars.Text = " ";
             this.BTNMars.UseVisualStyleBackColor = false;
+            this.BTNMars.Click += new System.EventHandler(this.BTNMars_Click);
             // 
             // BTNVenus
             // 
@@ -134,6 +138,7 @@ namespace SpaceJourney
             this.BTNVenus.TabIndex = 5;
             this.BTNVenus.Text = " ";
             this.BTNVenus.UseVisualStyleBackColor = false;
+            this.BTNVenus.Click += new System.EventHandler(this.BTNVenus_Click);
             // 
             // BTNSaturn
             // 
@@ -148,6 +153,7 @@ namespace SpaceJourney
             this.BTNSaturn.TabIndex = 6;
             this.BTNSaturn.Text = " ";
             this.BTNSaturn.UseVisualStyleBackColor = false;
+            this.BTNSaturn.Click += new System.EventHandler(this.BTNSaturn_Click);
             // 
             // BTNUranus
             // 
@@ -162,6 +168,7 @@ namespace SpaceJourney
             this.BTNUranus.TabIndex = 7;
             this.BTNUranus.Text = " ";
             this.BTNUranus.UseVisualStyleBackColor = false;
+            this.BTNUranus.Click += new System.EventHandler(this.BTNUranus_Click);
             // 
             // BTNNeptune
             // 
@@ -176,6 +183,7 @@ namespace SpaceJourney
             this.BTNNeptune.TabIndex = 8;
             this.BTNNeptune.Text = " ";
             this.BTNNeptune.UseVisualStyleBackColor = false;
+            this.BTNNeptune.Click += new System.EventHandler(this.BTNNeptune_Click);
             // 
             // toolStripMainMenu
             // 
@@ -216,6 +224,7 @@ namespace SpaceJourney
             // BTNPlanetsList
             // 
             this.BTNPlanetsList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BTNPlanetsList.BackgroundImage = global::SpaceJourney.Properties.Resources.btnlisticon;
             this.BTNPlanetsList.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.BTNPlanetsList.Image = global::SpaceJourney.Properties.Resources.btnlisticon;
             this.BTNPlanetsList.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -229,6 +238,11 @@ namespace SpaceJourney
             this.LBLPlanetsList.Name = "LBLPlanetsList";
             this.LBLPlanetsList.Size = new System.Drawing.Size(143, 25);
             this.LBLPlanetsList.Text = "СПИСОК ПЛАНЕТ";
+            // 
+            // cekyndomep
+            // 
+            this.cekyndomep.Interval = 50;
+            this.cekyndomep.Tick += new System.EventHandler(this.cekyndomep_Tick);
             // 
             // SpaceMenu
             // 

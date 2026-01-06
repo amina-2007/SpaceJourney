@@ -118,37 +118,118 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tearrth" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tearrth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="venus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\venus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="saturn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\saturn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SURmars" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SURmars.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SURearth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SURearth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tesmercury" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tesmercury.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mars" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mars.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FRSTvenus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRSTvenus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LASTmars" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LASTmars.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LASTjupiter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LASTjupiter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnlisticon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnlisticon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SURuranus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SURuranus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LASTuranus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LASTuranus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRSTmars" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRSTmars.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SURjupiter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SURjupiter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SURmercury" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SURmercury.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="jupiter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jupiter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sun" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="saturn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\saturn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnlisticon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnlisticon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="venus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\venus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="turaan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\turaan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FRSTmercury" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRSTmercury1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="neptune" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\neptune.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="FRSTsaturn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRSTsaturn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="turaan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\turaan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRSTuranus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRSTuranus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRSTneptune" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRSTneptune.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRSTearth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRSTearth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LASTvenus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LASTvenus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LASTsaturn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LASTsaturn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LASTneptune" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LASTneptune.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SURneptune" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SURneptune.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SURvenus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SURvenus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SURsaturn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SURsaturn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LASTmercury" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LASTmercury.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mars" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mars.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="btnordericon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnordericon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tearrth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tearrth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRSTjupiter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRSTjupiter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LASTearth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LASTearth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FRSTsun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FRSTsun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LASTsun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LASTsun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SURsun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SURsun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

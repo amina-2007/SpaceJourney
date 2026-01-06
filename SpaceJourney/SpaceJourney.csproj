@@ -59,6 +59,11 @@
     <Compile Include="PlanetInfoForm.Designer.cs">
       <DependentUpon>PlanetInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SpaceMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,14 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -133,30 +133,34 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="orderdata.txt" />
-    <Content Include="Resources\FRSTearth.png" />
-    <Content Include="Resources\FRSTjupiter.png" />
-    <Content Include="Resources\FRSTmars.png" />
-    <Content Include="Resources\FRSTmercury.png" />
-    <Content Include="Resources\FRSTneptune.png" />
-    <Content Include="Resources\FRSTsaturn.png" />
-    <Content Include="Resources\FRSTuranus.png" />
-    <Content Include="Resources\FRSTvenus.png" />
-    <Content Include="Resources\LASTearth.png" />
-    <Content Include="Resources\LASTjupiter.png" />
-    <Content Include="Resources\LASTmars.png" />
-    <Content Include="Resources\LASTmercury.png" />
-    <Content Include="Resources\LASTneptune.png" />
-    <Content Include="Resources\LASTsaturn.png" />
-    <Content Include="Resources\LASTuranus.png" />
-    <Content Include="Resources\LASTvenus.png" />
-    <Content Include="Resources\SURearth.png" />
-    <Content Include="Resources\SURjupiter.png" />
-    <Content Include="Resources\SURmars.png" />
-    <Content Include="Resources\SURmercury.png" />
-    <Content Include="Resources\SURneptune.png" />
-    <Content Include="Resources\SURsaturn.png" />
-    <Content Include="Resources\SURuranus.png" />
-    <Content Include="Resources\SURvenus.png" />
+    <None Include="Resources\SURsun.png" />
+    <None Include="Resources\LASTsun.png" />
+    <None Include="Resources\FRSTsun.png" />
+    <None Include="Resources\SURneptune.png" />
+    <None Include="Resources\SURuranus.png" />
+    <None Include="Resources\SURsaturn.png" />
+    <None Include="Resources\SURjupiter.png" />
+    <None Include="Resources\SURmars.png" />
+    <None Include="Resources\SURearth.png" />
+    <None Include="Resources\SURvenus.png" />
+    <None Include="Resources\SURmercury.png" />
+    <None Include="Resources\LASTneptune.png" />
+    <None Include="Resources\LASTuranus.png" />
+    <None Include="Resources\LASTsaturn.png" />
+    <None Include="Resources\LASTjupiter.png" />
+    <None Include="Resources\LASTmars.png" />
+    <None Include="Resources\LASTearth.png" />
+    <None Include="Resources\LASTvenus.png" />
+    <None Include="Resources\LASTmercury.png" />
+    <None Include="Resources\FRSTneptune.png" />
+    <None Include="Resources\FRSTuranus.png" />
+    <None Include="Resources\FRSTsaturn.png" />
+    <None Include="Resources\FRSTjupiter.png" />
+    <None Include="Resources\FRSTmars.png" />
+    <None Include="Resources\FRSTearth.png" />
+    <None Include="Resources\FRSTvenus.png" />
+    <None Include="Resources\FRSTmercury1.png" />
+    <None Include="Resources\btnlisticon1.png" />
     <None Include="Resources\btnordericon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
