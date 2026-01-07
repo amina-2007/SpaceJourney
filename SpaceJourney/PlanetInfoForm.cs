@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,11 +13,16 @@ namespace SpaceJourney
 {
     public partial class PlanetInfoForm : Form
     {
-        public PlanetInfoForm(Planet planet)
+        public PlanetInfoForm(Planet planet, List<Order> orders)
         {
             InitializeComponent();
             LoadPlanetInfo(planet); 
             PersonalizeColors(planet.PlanetName);
+           
+            OrderByPlanet(planet.PlanetName, orders);
+
+
+
         }
 
         private void PlanetInfoForm_Load(object sender, EventArgs e)
@@ -24,6 +30,17 @@ namespace SpaceJourney
 
         }
 
+        private void OrderByPlanet(string pName, List<Order> orders)
+        {
+            int c = 0;
+            dataGridPlanetInfo.Rows.Clear(); //сначала очистка потому что без нее каждый раз будут дублироваься заказы
+
+             var sortedOrders=orders.Where(x=>x.ChosenPlanet.ToUpper()==pName.ToUpper()).ToList(); //самый второй в проекте линк-запрос, просто фильтруем по выбранной планете
+             foreach (var order in sortedOrders)
+             {dataGridPlanetInfo.Rows.Add(order.Name, order.Phone, order.Snils, order.RType, order.ChosenPlanet); c++; }
+           labelOrderCount.Text ="Заказало поездку сюда: " + c.ToString();
+
+        }
 
         private void LoadPlanetInfo(Planet planet)
         {//ДАННЫЕ ПЕРЕдаем в форму

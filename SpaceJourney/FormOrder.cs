@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -12,7 +13,7 @@ using System.Windows.Forms;
 namespace SpaceJourney
 {
     public partial class FormOrder : Form
-    {
+    { 
         public FormOrder()
         {
             InitializeComponent();
@@ -84,6 +85,7 @@ namespace SpaceJourney
                 labelSomeText.Text = "Ок, данные занесены!";
 
                 dataGridOrders.Rows.Add(order.Name, order.Phone, order.Snils, order.RType, order.ChosenPlanet); //наглядно: в таблицу теперь передаются данные из класса честно это не иишные комменты это мои заметки
+                
             }
         }
 
@@ -163,5 +165,49 @@ namespace SpaceJourney
                 labelSomeText.Text = "За раз удалить можно \nтолько одну строку.\n Кликаем левый столбец! ";
             }
         }
+
+        private void BTNSadlySave_Click(object sender, EventArgs e)
+        {
+            using(StreamWriter sw = new StreamWriter("orderdata.txt"))
+            {
+                foreach (DataGridViewRow row in dataGridOrders.Rows)
+                {
+                    if (row.IsNewRow==false)
+                    {
+                        sw.WriteLine($"{row.Cells["ColumnName"].Value}#{row.Cells["ColumnPhone"].Value}#{row.Cells["ColumnSnils"].Value}#{row.Cells["ColumnRocket"].Value}#{row.Cells["ColumnPlanet"].Value}");
+                    }
+                }
+            }
+            labelSomeText.Text = "Данные сохранены.";
+        } 
+
+        private void buttonSadlyLoad_Click(object sender, EventArgs e)
+        {
+            dataGridOrders.Rows.Clear();
+            using (StreamReader sr = new StreamReader("orderdata.txt"))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    string[] parts = line.Split('#');
+
+                    if (parts.Length >= 4)
+                    {
+                        dataGridOrders.Rows.Add( 
+                         
+                              parts[0],
+                             parts[1],
+                             parts[2],
+                             parts[3],
+                              parts[4]
+                         );
+                    }
+                }
+            }
+            labelSomeText.Text = "Данные загружены.";
+
+        }
+
+         
     }
 }

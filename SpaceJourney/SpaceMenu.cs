@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace SpaceJourney
 {
     public partial class SpaceMenu : Form
     {
+        private List<Order> orders = new List<Order>();
         public SpaceMenu()
         {
             InitializeComponent();
@@ -31,6 +33,8 @@ namespace SpaceJourney
 
         private void BTNMercury_Click(object sender, EventArgs e)
         {
+            FillOrdersList();
+
             Planet mercury = new Planet("МЕРКУРИЙ", "Меркурий - самая маленькая и наиболее приближенная к Солнцу планета в нашей Солнечной" +
                 " системе. Это каменистое небесное тело, поверхность которого обильно покрыта кратерами, что делает его похожим на Луну. " +
                 "Из-за близости к Солнцу, Меркурий получает огромное количество солнечного излучения, однако, практически полное отсутствие " +
@@ -39,12 +43,14 @@ namespace SpaceJourney
                 "значительно длиннее и составляют около 59 земных дней. Меркурий обладает очень слабым магнитным полем, что является загадкой" +
                 " для ученых, учитывая его медленное вращение. Из-за отсутствия атмосферы на планете не наблюдается погодных явлений, а её" +
                 " поверхность подвержена постоянной бомбардировке метеоритами.", 22, 222, Properties.Resources.FRSTmercury, Properties.Resources.LASTmercury, Properties.Resources.SURmercury);
-            PlanetInfoForm planetInfo = new PlanetInfoForm(mercury);
+            PlanetInfoForm planetInfo = new PlanetInfoForm(mercury, orders);
             planetInfo.ShowDialog();
         }
 
         private void BTNVenus_Click(object sender, EventArgs e)
         {
+            FillOrdersList();
+
             Planet venus = new Planet("ВЕНЕРА", "Венера – вторая планета от Солнца, известная как \"утренняя звезда\" или \"вечерняя звезда\"." +
                 " Это ближайший к Земле планетный сосед, но условия на ней радикально отличаются. Венера обладает плотной атмосферой, состоящей" +
                 " в основном из углекислого газа, что создает парниковый эффект, приводящий к крайне высоким температурам на поверхности, превышающим " +
@@ -52,12 +58,14 @@ namespace SpaceJourney
                 " наблюдения в видимом свете. Облака состоят в основном из серной кислоты. Венера вращается вокруг своей оси в обратном направлении" +
                 " по сравнению с большинством других планет, и сутки на Венере длиннее, чем её год. На Венере практически нет воды, и она характеризуется" +
                 " равнинным ландшафтом с вулканическими образованиями.", 1, 1, Properties.Resources.FRSTvenus, Properties.Resources.LASTvenus, Properties.Resources.SURvenus);
-            PlanetInfoForm planetInfo = new PlanetInfoForm(venus);
+            PlanetInfoForm planetInfo = new PlanetInfoForm(venus, orders);
             planetInfo.ShowDialog();
         }
 
         private void BTNEarth_Click(object sender, EventArgs e)
         {
+            FillOrdersList();
+
             Planet earth = new Planet("ЗЕМЛЯ", "Земля — третья планета от Солнца и, пока что, единственное известное место во Вселенной, где существует жизнь." +
                 " Она обладает уникальным сочетанием факторов, поддерживающих биологическое разнообразие: умеренная температура, наличие жидкой воды, богатая" +
                 " кислородом атмосфера и защита от вредного солнечного излучения благодаря магнитному полю и озоновому слою. Земля состоит из нескольких слоев:" +
@@ -66,12 +74,14 @@ namespace SpaceJourney
                 " от арктических пустынь до тропических лесов. Земля обладает одним естественным спутником — Луной, которая оказывает влияние на приливы и отливы," +
                 " а также стабилизирует вращение Земли. Год на Земле длится 365,25 дней, а сутки - 24 часа. Жизнь на Земле существует во множестве форм, от" +
                 " микроскопических бактерий до огромных китов и сложных экосистем, что делает ее исключительной и требующей бережного отношения.", 1, 1, Properties.Resources.FRSTearth, Properties.Resources.LASTearth, Properties.Resources.SURearth);
-            PlanetInfoForm planetInfo = new PlanetInfoForm(earth);
+            PlanetInfoForm planetInfo = new PlanetInfoForm(earth, orders);
             planetInfo.ShowDialog();
         }
 
         private void BTNMars_Click(object sender, EventArgs e)
         {
+            FillOrdersList();
+
             Planet mars = new Planet("МАРС", "Марс — четвёртая планета от Солнца и последний из планет земной группы, часто называемый \"красной планетой\"" +
                 " из-за высокого содержания оксида железа (ржавчины) на его поверхности. Атмосфера Марса очень разреженная, состоит в основном из углекислого" +
                 " газа, что делает планету холодной и сухой, непригодной для жизни в том виде, в каком мы её знаем. На Марсе есть признаки существования воды" +
@@ -79,12 +89,13 @@ namespace SpaceJourney
                 " самый высокий вулкан и гору в Солнечной системе, а также гигантский каньон — Долина Маринера. Марс имеет два небольших спутника — Фобос и Деймос." +
                 " Продолжительность года на Марсе почти вдвое больше, чем на Земле, а сутки примерно равны земным. Марс является объектом активных исследований, " +
                 "направленных на поиск признаков прошлой или настоящей жизни, а также на возможность колонизации.", 1, 1, Properties.Resources.FRSTmars, Properties.Resources.LASTmars, Properties.Resources.SURmars);
-            PlanetInfoForm planetInfo = new PlanetInfoForm(mars);
+            PlanetInfoForm planetInfo = new PlanetInfoForm(mars, orders);
             planetInfo.ShowDialog();
         }
 
         private void BTNJupiter_Click(object sender, EventArgs e)
         {
+            FillOrdersList();
             Planet jupiter = new Planet("ЮПИТЕР", "Юпитер — пятая планета от Солнца и крупнейшая планета в нашей Солнечной системе, являющаяся газовым гигантом." +
                 " Он состоит в основном из водорода и гелия, как и Солнце, и не имеет твердой поверхности. Юпитер известен своими полосами облаков и Большим Красным " +
                 "Пятном — гигантским штормом, который бушует на планете уже сотни лет. Юпитер обладает мощным магнитным полем, а также окружен системой колец, хотя" +
@@ -93,12 +104,14 @@ namespace SpaceJourney
                 " потенциально пригодный для жизни, а Ганимед — самый большой спутник в Солнечной системе и единственная луна с собственным магнитным полем." +
                 " Год на Юпитере длится около 12 земных лет, а сутки — всего около 10 земных часов. Юпитер играет важную роль в защите Земли, поскольку его гравитация" +
                 " притягивает многие кометы и астероиды, предотвращая их столкновение с нашей планетой.", 1, 1, Properties.Resources.FRSTjupiter, Properties.Resources.LASTjupiter, Properties.Resources.SURjupiter);
-            PlanetInfoForm planetInfo = new PlanetInfoForm(jupiter);
+            PlanetInfoForm planetInfo = new PlanetInfoForm(jupiter, orders);
             planetInfo.ShowDialog();
         }
 
         private void BTNSaturn_Click(object sender, EventArgs e)
         {
+            FillOrdersList();
+
             Planet saturn = new Planet("САТУРН", "Сатурн – шестая планета от Солнца и вторая по величине планета в нашей Солнечной системе, являющаяся газовым гигантом." +
                 " Он известен своей впечатляющей системой колец, состоящих из миллиардов частиц льда и камней. Сатурн, как и Юпитер, состоит в основном из водорода и " +
                 "гелия и не имеет твердой поверхности. Его атмосфера характеризуется полосами, но они менее выражены, чем у Юпитера. Скорость ветра на Сатурне может достигать" +
@@ -107,12 +120,14 @@ namespace SpaceJourney
                 " Сатурна, известен своими гейзерами, извергающими водяной лед в космос, что указывает на наличие подледного океана. Год на Сатурне длится около 29,5 земных" +
                 " лет, а сутки — примерно 10,7 земных часов. Сатурн обладает мощным магнитным полем. Его кольца — это динамичная и сложная система, постоянно меняющаяся" +
                 " под воздействием гравитации спутников и других факторов.", 1, 1, Properties.Resources.FRSTsaturn, Properties.Resources.LASTsaturn, Properties.Resources.SURsaturn);
-            PlanetInfoForm planetInfo = new PlanetInfoForm(saturn);
+            PlanetInfoForm planetInfo = new PlanetInfoForm(saturn, orders);
             planetInfo.ShowDialog();
         }
 
         private void BTNUranus_Click(object sender, EventArgs e)
         {
+            FillOrdersList();
+
             Planet uranus = new Planet("УРАН", "Уран — седьмая планета от Солнца и один из ледяных гигантов нашей Солнечной системы. В отличие от газовых гигантов, таких как Юпитер" +
                 " и Сатурн, Уран в основном состоит из \"льдов\" — водяного, аммиачного и метанового, а также водорода и гелия. Уран имеет самую холодную атмосферу среди всех планет" +
                 " Солнечной системы, с минимальной температурой около -224 градусов Цельсия. Уран известен своим необычным вращением: он вращается \"на боку\", с осью вращения, " +
@@ -120,12 +135,14 @@ namespace SpaceJourney
                 "42 земных лет, а затем погружаются в тьму на то же время. Уран обладает слабой системой колец, которые тоньше и темнее, чем у Сатурна. У Урана много спутников," +
                 " самыми крупными из которых являются Миранда, Ариэль, Умбриэль, Титания и Оберон. Год на Уране длится около 84 земных лет, а сутки — примерно 17 земных часов." +
                 " Магнитное поле Урана также необычно: оно наклонено и смещено от центра планеты.", 1, 1, Properties.Resources.FRSTuranus, Properties.Resources.LASTuranus, Properties.Resources.SURuranus);
-            PlanetInfoForm planetInfo = new PlanetInfoForm(uranus);
+            PlanetInfoForm planetInfo = new PlanetInfoForm(uranus, orders);
             planetInfo.ShowDialog();
         }
 
         private void BTNNeptune_Click(object sender, EventArgs e)
         {
+            FillOrdersList();
+
             Planet neptune = new Planet("НЕПТУН", "Нептун – восьмая и самая дальняя от Солнца планета нашей Солнечной системы, также являющаяся ледяным гигантом. Нептун похож по " +
                 "составу на Уран, с преобладанием \"льдов\" (водяного, аммиачного и метанового), водорода и гелия. Атмосфера Нептуна очень динамична, с самыми сильными ветрами в " +
                 "Солнечной системе, достигающими скорости свыше 2000 км/ч. В атмосфере наблюдались большие штормы, такие как Большое Темное Пятно, напоминающее Большое Красное" +
@@ -134,12 +151,14 @@ namespace SpaceJourney
                 " движение), что указывает на то, что он, вероятно, был захвачен гравитацией Нептуна. Тритон также является геологически активным телом, с гейзерами, извергающими " +
                 "азот. Год на Нептуне длится около 165 земных лет, а сутки — примерно 16 земных часов. У Нептуна сильное магнитное поле, наклоненное и смещенное относительно оси" +
                 " вращения планеты.", 1, 1, Properties.Resources.FRSTneptune, Properties.Resources.LASTneptune, Properties.Resources.SURneptune);
-            PlanetInfoForm planetInfo = new PlanetInfoForm(neptune);
+            PlanetInfoForm planetInfo = new PlanetInfoForm(neptune, orders);
             planetInfo.ShowDialog();
         }
 
         private void BTNSun_Click(object sender, EventArgs e)
         {
+            FillOrdersList();
+
             Planet sun = new Planet("СОЛНЦЕ", "Солнце — это звезда, расположенная в центре нашей Солнечной системы и являющаяся ее\r\n   " +
                 "             самым массивным объектом, составляя около 99,86 % от общей массы всей системы. Оно представляет собой\r\n       " +
                 "         огромный шар горячей плазмы, состоящий в основном из водорода (около 71 %) и гелия (около 27 %), а\r\n          " +
@@ -153,13 +172,13 @@ namespace SpaceJourney
                 "     Над фотосферой находится хромосфера и корона, которые видны во время полных солнечных затмений.\r\n      " +
                 "          Солнечная активность, такая как солнечные вспышки и корональные выбросы массы, может оказывать\r\n    " +
                 "            влияние на магнитное поле Земли и вызывать геомагнитные бури.", 1, 1, Properties.Resources.FRSTsun, Properties.Resources.LASTsun, Properties.Resources.SURsun);
-            PlanetInfoForm planetInfo = new PlanetInfoForm(sun);
+            PlanetInfoForm planetInfo = new PlanetInfoForm(sun, orders);
             planetInfo.ShowDialog();
         }
 
         private void cekyndomep_Tick(object sender, EventArgs e)
         {
-            this.DoubleBuffered = true; //убирает мерцание но короче просто плавная анимация
+            this.DoubleBuffered = true; //убирает мерцание но короче просто плавная анимация //upd зато возможно дело в функции moveplanet
             MovePlanet(BTNMercury, 80, 8);
 
             MovePlanet(BTNVenus, 120, 3);
@@ -192,6 +211,35 @@ namespace SpaceJourney
 
             planet.Left = x - planet.Width / 2;
             planet.Top = y - planet.Height / 2;
+        }
+         
+        private void FillOrdersList()
+        {
+             
+            orders.Clear();
+
+             
+            {
+                string[] lines = File.ReadAllLines("orderdata.txt");
+
+                foreach (string line in lines)
+                {
+                    string[] parts = line.Split('#');
+
+                     
+                        Order order = new Order(
+                          parts[0],
+                         parts[1],
+                         parts[2],
+                         parts[3],
+                         parts[4]);
+
+                        orders.Add(order);
+                    
+                }
+                 
+            }
+            
         }
     }
 }

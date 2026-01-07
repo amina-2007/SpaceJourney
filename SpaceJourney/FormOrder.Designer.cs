@@ -33,6 +33,7 @@
             this.ColumnPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSnils = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnRocket = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPlanet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LBLOrder = new System.Windows.Forms.Label();
             this.radioButtonRus = new System.Windows.Forms.RadioButton();
             this.TXTName = new System.Windows.Forms.TextBox();
@@ -54,7 +55,6 @@
             this.buttonEraseFromGrid = new System.Windows.Forms.Button();
             this.comboBoxPlanets = new System.Windows.Forms.ComboBox();
             this.labelChosenPlaned = new System.Windows.Forms.Label();
-            this.ColumnPlanet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridOrders)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,6 +102,12 @@
             this.ColumnRocket.HeaderText = "ТИП ТРАНСПОРТА";
             this.ColumnRocket.Name = "ColumnRocket";
             this.ColumnRocket.ReadOnly = true;
+            // 
+            // ColumnPlanet
+            // 
+            this.ColumnPlanet.HeaderText = "ПЛАНЕТА";
+            this.ColumnPlanet.Name = "ColumnPlanet";
+            this.ColumnPlanet.ReadOnly = true;
             // 
             // LBLOrder
             // 
@@ -291,6 +297,7 @@
             this.BTNSadlySave.TabIndex = 17;
             this.BTNSadlySave.Text = "СОХРАНИТЬ";
             this.BTNSadlySave.UseVisualStyleBackColor = false;
+            this.BTNSadlySave.Click += new System.EventHandler(this.BTNSadlySave_Click);
             // 
             // buttonSadlyLoad
             // 
@@ -302,6 +309,7 @@
             this.buttonSadlyLoad.TabIndex = 18;
             this.buttonSadlyLoad.Text = "ЗАГРУЗИТЬ";
             this.buttonSadlyLoad.UseVisualStyleBackColor = false;
+            this.buttonSadlyLoad.Click += new System.EventHandler(this.buttonSadlyLoad_Click);
             // 
             // buttonEraseFromGrid
             // 
@@ -343,12 +351,6 @@
             this.labelChosenPlaned.Size = new System.Drawing.Size(223, 29);
             this.labelChosenPlaned.TabIndex = 21;
             this.labelChosenPlaned.Text = "ВЫБРАННАЯ ПЛАНЕТА";
-            // 
-            // ColumnPlanet
-            // 
-            this.ColumnPlanet.HeaderText = "ПЛАНЕТА";
-            this.ColumnPlanet.Name = "ColumnPlanet";
-            this.ColumnPlanet.ReadOnly = true;
             // 
             // FormOrder
             // 

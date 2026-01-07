@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpaceJourney
 {
-    internal interface IOrder
+    public interface IOrder
     {
         string Name { get; }
         string Phone { get; }
@@ -14,7 +14,7 @@ namespace SpaceJourney
         string RType { get; }
         string ChosenPlanet { get; }
     }
-    internal class Order : IOrder
+    public class Order : IOrder
     {
         public string Name { get; set; }
         public string Phone { get; set; }
