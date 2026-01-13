@@ -231,6 +231,7 @@ namespace SpaceJourney
             this.BTNPlanetsList.Name = "BTNPlanetsList";
             this.BTNPlanetsList.Size = new System.Drawing.Size(23, 25);
             this.BTNPlanetsList.Text = "toolStripButton2";
+            this.BTNPlanetsList.Click += new System.EventHandler(this.BTNPlanetsList_Click);
             // 
             // LBLPlanetsList
             // 

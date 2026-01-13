@@ -115,13 +115,15 @@ namespace SpaceJourney
 
         //ну просто значение передает
         private string RBValue()
-        {
-            string select = "";
-            if (radioButtonCarpet.Checked) select = "Ковёр";
-            else if (radioButtonMusk.Checked) select = "SPACEX";
-            else if (radioButtonRus.Checked) select = "Ракета наша";
-            else if (radioButtonUFO.Checked) select = "НЛО";
-            return select;
+        {// tuple, LINQ #3
+           var  select = new[] { 
+           (radioButtonCarpet,"Ковёр"),
+           (radioButtonMusk, "SPACEX" ),
+           (radioButtonRus, "Ракета наша"),
+           (radioButtonUFO,"НЛО" )
+           }.Single(x=>x.Item1.Checked); 
+            
+            return select.Item2 ;
         }
         //проверяю все ли поля заполнены и в отдельном методе могу сколь угодно уродливый код делать. приватный потому что помимо этой формы нигде не будет применяться
         private bool AllEntered( )

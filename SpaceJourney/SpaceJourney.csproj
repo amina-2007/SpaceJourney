@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BetterPlanetsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BetterPlanetsList.Designer.cs">
+      <DependentUpon>BetterPlanetsList.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Planet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BetterPlanetsList.resx">
+      <DependentUpon>BetterPlanetsList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormOrder.resx">
       <DependentUpon>FormOrder.cs</DependentUpon>
     </EmbeddedResource>

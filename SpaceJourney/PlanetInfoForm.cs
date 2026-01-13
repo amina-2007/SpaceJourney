@@ -37,7 +37,11 @@ namespace SpaceJourney
 
              var sortedOrders=orders.Where(x=>x.ChosenPlanet.ToUpper()==pName.ToUpper()).ToList(); //самый второй в проекте линк-запрос, просто фильтруем по выбранной планете
              foreach (var order in sortedOrders)
-             {dataGridPlanetInfo.Rows.Add(order.Name, order.Phone, order.Snils, order.RType, order.ChosenPlanet); c++; }
+             {dataGridPlanetInfo.Rows.Add(order.Name, order.Phone, order.Snils, order.RType, order.ChosenPlanet); c++;
+             
+            }
+            if (pName == "СОЛНЦЕ")labelOrderCount.Text= "На солнце едут шашлыки!";
+            else
            labelOrderCount.Text ="Заказало поездку сюда: " + c.ToString();
 
         }

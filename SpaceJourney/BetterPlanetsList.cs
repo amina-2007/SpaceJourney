@@ -11,27 +11,50 @@ using System.Windows.Forms;
 
 namespace SpaceJourney
 {
-    public partial class SpaceMenu : Form
+    public partial class BetterPlanetsList : Form  
     {
-        public   List<Order> orders = new List<Order>();
-        public SpaceMenu()
+        public List<Order> orders = new List<Order>();
+
+        public BetterPlanetsList()
         {
             InitializeComponent();
-            cekyndomep.Start();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void FillOrdersList()
         {
 
+            orders.Clear();
+
+
+            {
+                string[] lines = File.ReadAllLines("orderdata.txt");
+
+                foreach (string line in lines)
+                {
+                    string[] parts = line.Split('#');
+
+
+                    Order order = new Order(
+                      parts[0],
+                     parts[1],
+                     parts[2],
+                     parts[3],
+                     parts[4]);
+
+                    orders.Add(order);
+
+                }
+
+            }
+
         }
 
-        private void BTNOrderTheJourney_Click(object sender, EventArgs e)
-        {//че м show ot showdialog отличается? без диалог можно при открытии новой формы работать с предыдущей а с диалог только с открытой так что либо заказывать поездку либо нажимаьь на кнопку во второй форме чтобы ее закрыть
-            FormOrder order= new FormOrder();
-            order.ShowDialog();
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
-        private void BTNMercury_Click(object sender, EventArgs e)
+        private void buttonMercury_Click(object sender, EventArgs e)
         {
             FillOrdersList();
 
@@ -47,7 +70,7 @@ namespace SpaceJourney
             planetInfo.ShowDialog();
         }
 
-        private void BTNVenus_Click(object sender, EventArgs e)
+        private void buttonVenus_Click(object sender, EventArgs e)
         {
             FillOrdersList();
 
@@ -62,7 +85,7 @@ namespace SpaceJourney
             planetInfo.ShowDialog();
         }
 
-        private void BTNEarth_Click(object sender, EventArgs e)
+        private void buttonEatth_Click(object sender, EventArgs e)
         {
             FillOrdersList();
 
@@ -78,7 +101,7 @@ namespace SpaceJourney
             planetInfo.ShowDialog();
         }
 
-        private void BTNMars_Click(object sender, EventArgs e)
+        private void buttonMars_Click(object sender, EventArgs e)
         {
             FillOrdersList();
 
@@ -93,69 +116,7 @@ namespace SpaceJourney
             planetInfo.ShowDialog();
         }
 
-        private void BTNJupiter_Click(object sender, EventArgs e)
-        {
-            FillOrdersList();
-            Planet jupiter = new Planet("ЮПИТЕР", "Юпитер — пятая планета от Солнца и крупнейшая планета в нашей Солнечной системе, являющаяся газовым гигантом." +
-                " Он состоит в основном из водорода и гелия, как и Солнце, и не имеет твердой поверхности. Юпитер известен своими полосами облаков и Большим Красным " +
-                "Пятном — гигантским штормом, который бушует на планете уже сотни лет. Юпитер обладает мощным магнитным полем, а также окружен системой колец, хотя" +
-                " и тусклых и не таких заметных, как у Сатурна. У Юпитера огромное количество спутников, включая четыре крупнейших, открытых Галилео Галилеем: Ио," +
-                " Европа, Ганимед и Каллисто. Ио является самым вулканически активным телом в Солнечной системе, Европа, возможно, содержит подлёдный океан," +
-                " потенциально пригодный для жизни, а Ганимед — самый большой спутник в Солнечной системе и единственная луна с собственным магнитным полем." +
-                " Год на Юпитере длится около 12 земных лет, а сутки — всего около 10 земных часов. Юпитер играет важную роль в защите Земли, поскольку его гравитация" +
-                " притягивает многие кометы и астероиды, предотвращая их столкновение с нашей планетой.", 1, 1, Properties.Resources.FRSTjupiter, Properties.Resources.LASTjupiter, Properties.Resources.SURjupiter);
-            PlanetInfoForm planetInfo = new PlanetInfoForm(jupiter, orders);
-            planetInfo.ShowDialog();
-        }
-
-        private void BTNSaturn_Click(object sender, EventArgs e)
-        {
-            FillOrdersList();
-
-            Planet saturn = new Planet("САТУРН", "Сатурн – шестая планета от Солнца и вторая по величине планета в нашей Солнечной системе, являющаяся газовым гигантом." +
-                " Он известен своей впечатляющей системой колец, состоящих из миллиардов частиц льда и камней. Сатурн, как и Юпитер, состоит в основном из водорода и " +
-                "гелия и не имеет твердой поверхности. Его атмосфера характеризуется полосами, но они менее выражены, чем у Юпитера. Скорость ветра на Сатурне может достигать" +
-                " огромных значений, превышающих 1800 км/ч. У Сатурна большое количество спутников, самым крупным из которых является Титан – единственный спутник в Солнечной " +
-                "системе, обладающий плотной атмосферой и стабильными жидкостными образованиями на поверхности (озера и моря из метана и этана). Энцелад, еще один спутник" +
-                " Сатурна, известен своими гейзерами, извергающими водяной лед в космос, что указывает на наличие подледного океана. Год на Сатурне длится около 29,5 земных" +
-                " лет, а сутки — примерно 10,7 земных часов. Сатурн обладает мощным магнитным полем. Его кольца — это динамичная и сложная система, постоянно меняющаяся" +
-                " под воздействием гравитации спутников и других факторов.", 1, 1, Properties.Resources.FRSTsaturn, Properties.Resources.LASTsaturn, Properties.Resources.SURsaturn);
-            PlanetInfoForm planetInfo = new PlanetInfoForm(saturn, orders);
-            planetInfo.ShowDialog();
-        }
-
-        private void BTNUranus_Click(object sender, EventArgs e)
-        {
-            FillOrdersList();
-
-            Planet uranus = new Planet("УРАН", "Уран — седьмая планета от Солнца и один из ледяных гигантов нашей Солнечной системы. В отличие от газовых гигантов, таких как Юпитер" +
-                " и Сатурн, Уран в основном состоит из \"льдов\" — водяного, аммиачного и метанового, а также водорода и гелия. Уран имеет самую холодную атмосферу среди всех планет" +
-                " Солнечной системы, с минимальной температурой около -224 градусов Цельсия. Уран известен своим необычным вращением: он вращается \"на боку\", с осью вращения, " +
-                "наклоненной почти на 98 градусов к плоскости его орбиты. Это приводит к экстремальным сезонным изменениям, где полюса поочередно освещаются Солнцем в течение " +
-                "42 земных лет, а затем погружаются в тьму на то же время. Уран обладает слабой системой колец, которые тоньше и темнее, чем у Сатурна. У Урана много спутников," +
-                " самыми крупными из которых являются Миранда, Ариэль, Умбриэль, Титания и Оберон. Год на Уране длится около 84 земных лет, а сутки — примерно 17 земных часов." +
-                " Магнитное поле Урана также необычно: оно наклонено и смещено от центра планеты.", 1, 1, Properties.Resources.FRSTuranus, Properties.Resources.LASTuranus, Properties.Resources.SURuranus);
-            PlanetInfoForm planetInfo = new PlanetInfoForm(uranus, orders);
-            planetInfo.ShowDialog();
-        }
-
-        private void BTNNeptune_Click(object sender, EventArgs e)
-        {
-            FillOrdersList();
-
-            Planet neptune = new Planet("НЕПТУН", "Нептун – восьмая и самая дальняя от Солнца планета нашей Солнечной системы, также являющаяся ледяным гигантом. Нептун похож по " +
-                "составу на Уран, с преобладанием \"льдов\" (водяного, аммиачного и метанового), водорода и гелия. Атмосфера Нептуна очень динамична, с самыми сильными ветрами в " +
-                "Солнечной системе, достигающими скорости свыше 2000 км/ч. В атмосфере наблюдались большие штормы, такие как Большое Темное Пятно, напоминающее Большое Красное" +
-                " Пятно на Юпитере, но менее долговечное. Нептун обладает слабой системой колец, состоящей из пыли и небольших обломков. У Нептуна есть много спутников, самым" +
-                " крупным из которых является Тритон – единственный крупный спутник в Солнечной системе, вращающийся в направлении, противоположном вращению планеты (ретроградное" +
-                " движение), что указывает на то, что он, вероятно, был захвачен гравитацией Нептуна. Тритон также является геологически активным телом, с гейзерами, извергающими " +
-                "азот. Год на Нептуне длится около 165 земных лет, а сутки — примерно 16 земных часов. У Нептуна сильное магнитное поле, наклоненное и смещенное относительно оси" +
-                " вращения планеты.", 1, 1, Properties.Resources.FRSTneptune, Properties.Resources.LASTneptune, Properties.Resources.SURneptune);
-            PlanetInfoForm planetInfo = new PlanetInfoForm(neptune, orders);
-            planetInfo.ShowDialog();
-        }
-
-        private void BTNSun_Click(object sender, EventArgs e)
+        private void buttonSun_Click(object sender, EventArgs e)
         {
             FillOrdersList();
 
@@ -176,76 +137,66 @@ namespace SpaceJourney
             planetInfo.ShowDialog();
         }
 
-        private void cekyndomep_Tick(object sender, EventArgs e)
+        private void buttonJupiter_Click(object sender, EventArgs e)
         {
-            this.DoubleBuffered = true; //убирает мерцание но короче просто плавная анимация //upd зато возможно дело в функции moveplanet
-            MovePlanet(BTNMercury, 80, 8);
-
-            MovePlanet(BTNVenus, 120, 3);
-
-            MovePlanet(BTNEarth, 150, 2);
-
-            MovePlanet(BTNMars, 190, 1.5);
-
-            MovePlanet(BTNJupiter, 250, 1);
-
-            MovePlanet(BTNSaturn, 320, 0.75);
-
-            MovePlanet(BTNUranus, 380, 0.5);
-
-            MovePlanet(BTNNeptune, 430, 0.25);
- 
-        }
-        private void MovePlanet(Button planet, int radius, double speed)
-        {
-            //взято с интернета потому что с математикой у меня плохо
-            double angle = 0;
-            if (planet.Tag != null) angle = (double)planet.Tag;
-
-            angle += speed;
-            planet.Tag = angle;
-             
-            double rad = angle * Math.PI / 180.0;
-            int x = BTNSun.Left + BTNSun.Width / 2 + (int)(radius * Math.Cos(rad));
-            int y = BTNSun.Top + BTNSun.Height / 2 + (int)(radius * Math.Sin(rad));
-
-            planet.Left = x - planet.Width / 2;
-            planet.Top = y - planet.Height / 2;
-        }
-         
-        public   void FillOrdersList()
-        {
-             
-            orders.Clear();
-
-             
-            {
-                string[] lines = File.ReadAllLines("orderdata.txt");
-
-                foreach (string line in lines)
-                {
-                    string[] parts = line.Split('#');
-
-                     
-                        Order order = new Order(
-                          parts[0],
-                         parts[1],
-                         parts[2],
-                         parts[3],
-                         parts[4]);
-
-                        orders.Add(order);
-                    
-                }
-                 
-            }
-            
+            FillOrdersList();
+            Planet jupiter = new Planet("ЮПИТЕР", "Юпитер — пятая планета от Солнца и крупнейшая планета в нашей Солнечной системе, являющаяся газовым гигантом." +
+                " Он состоит в основном из водорода и гелия, как и Солнце, и не имеет твердой поверхности. Юпитер известен своими полосами облаков и Большим Красным " +
+                "Пятном — гигантским штормом, который бушует на планете уже сотни лет. Юпитер обладает мощным магнитным полем, а также окружен системой колец, хотя" +
+                " и тусклых и не таких заметных, как у Сатурна. У Юпитера огромное количество спутников, включая четыре крупнейших, открытых Галилео Галилеем: Ио," +
+                " Европа, Ганимед и Каллисто. Ио является самым вулканически активным телом в Солнечной системе, Европа, возможно, содержит подлёдный океан," +
+                " потенциально пригодный для жизни, а Ганимед — самый большой спутник в Солнечной системе и единственная луна с собственным магнитным полем." +
+                " Год на Юпитере длится около 12 земных лет, а сутки — всего около 10 земных часов. Юпитер играет важную роль в защите Земли, поскольку его гравитация" +
+                " притягивает многие кометы и астероиды, предотвращая их столкновение с нашей планетой.", 1, 1, Properties.Resources.FRSTjupiter, Properties.Resources.LASTjupiter, Properties.Resources.SURjupiter);
+            PlanetInfoForm planetInfo = new PlanetInfoForm(jupiter, orders);
+            planetInfo.ShowDialog();
         }
 
-        private void BTNPlanetsList_Click(object sender, EventArgs e)
+        private void buttonSaturn_Click(object sender, EventArgs e)
         {
-            BetterPlanetsList betterPlanetsList = new BetterPlanetsList();
-            betterPlanetsList.ShowDialog();
+            FillOrdersList();
+
+            Planet saturn = new Planet("САТУРН", "Сатурн – шестая планета от Солнца и вторая по величине планета в нашей Солнечной системе, являющаяся газовым гигантом." +
+                " Он известен своей впечатляющей системой колец, состоящих из миллиардов частиц льда и камней. Сатурн, как и Юпитер, состоит в основном из водорода и " +
+                "гелия и не имеет твердой поверхности. Его атмосфера характеризуется полосами, но они менее выражены, чем у Юпитера. Скорость ветра на Сатурне может достигать" +
+                " огромных значений, превышающих 1800 км/ч. У Сатурна большое количество спутников, самым крупным из которых является Титан – единственный спутник в Солнечной " +
+                "системе, обладающий плотной атмосферой и стабильными жидкостными образованиями на поверхности (озера и моря из метана и этана). Энцелад, еще один спутник" +
+                " Сатурна, известен своими гейзерами, извергающими водяной лед в космос, что указывает на наличие подледного океана. Год на Сатурне длится около 29,5 земных" +
+                " лет, а сутки — примерно 10,7 земных часов. Сатурн обладает мощным магнитным полем. Его кольца — это динамичная и сложная система, постоянно меняющаяся" +
+                " под воздействием гравитации спутников и других факторов.", 1, 1, Properties.Resources.FRSTsaturn, Properties.Resources.LASTsaturn, Properties.Resources.SURsaturn);
+            PlanetInfoForm planetInfo = new PlanetInfoForm(saturn, orders);
+            planetInfo.ShowDialog();
+        }
+
+        private void buttonUranus_Click(object sender, EventArgs e)
+        {
+            FillOrdersList();
+
+            Planet uranus = new Planet("УРАН", "Уран — седьмая планета от Солнца и один из ледяных гигантов нашей Солнечной системы. В отличие от газовых гигантов, таких как Юпитер" +
+                " и Сатурн, Уран в основном состоит из \"льдов\" — водяного, аммиачного и метанового, а также водорода и гелия. Уран имеет самую холодную атмосферу среди всех планет" +
+                " Солнечной системы, с минимальной температурой около -224 градусов Цельсия. Уран известен своим необычным вращением: он вращается \"на боку\", с осью вращения, " +
+                "наклоненной почти на 98 градусов к плоскости его орбиты. Это приводит к экстремальным сезонным изменениям, где полюса поочередно освещаются Солнцем в течение " +
+                "42 земных лет, а затем погружаются в тьму на то же время. Уран обладает слабой системой колец, которые тоньше и темнее, чем у Сатурна. У Урана много спутников," +
+                " самыми крупными из которых являются Миранда, Ариэль, Умбриэль, Титания и Оберон. Год на Уране длится около 84 земных лет, а сутки — примерно 17 земных часов." +
+                " Магнитное поле Урана также необычно: оно наклонено и смещено от центра планеты.", 1, 1, Properties.Resources.FRSTuranus, Properties.Resources.LASTuranus, Properties.Resources.SURuranus);
+            PlanetInfoForm planetInfo = new PlanetInfoForm(uranus, orders);
+            planetInfo.ShowDialog();
+        }
+
+        private void buttonNeptune_Click(object sender, EventArgs e)
+        {
+            FillOrdersList();
+
+            Planet neptune = new Planet("НЕПТУН", "Нептун – восьмая и самая дальняя от Солнца планета нашей Солнечной системы, также являющаяся ледяным гигантом. Нептун похож по " +
+                "составу на Уран, с преобладанием \"льдов\" (водяного, аммиачного и метанового), водорода и гелия. Атмосфера Нептуна очень динамична, с самыми сильными ветрами в " +
+                "Солнечной системе, достигающими скорости свыше 2000 км/ч. В атмосфере наблюдались большие штормы, такие как Большое Темное Пятно, напоминающее Большое Красное" +
+                " Пятно на Юпитере, но менее долговечное. Нептун обладает слабой системой колец, состоящей из пыли и небольших обломков. У Нептуна есть много спутников, самым" +
+                " крупным из которых является Тритон – единственный крупный спутник в Солнечной системе, вращающийся в направлении, противоположном вращению планеты (ретроградное" +
+                " движение), что указывает на то, что он, вероятно, был захвачен гравитацией Нептуна. Тритон также является геологически активным телом, с гейзерами, извергающими " +
+                "азот. Год на Нептуне длится около 165 земных лет, а сутки — примерно 16 земных часов. У Нептуна сильное магнитное поле, наклоненное и смещенное относительно оси" +
+                " вращения планеты.", 1, 1, Properties.Resources.FRSTneptune, Properties.Resources.LASTneptune, Properties.Resources.SURneptune);
+            PlanetInfoForm planetInfo = new PlanetInfoForm(neptune, orders);
+            planetInfo.ShowDialog();
         }
     }
 }
