@@ -173,16 +173,6 @@ namespace SpaceJourney.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap jupiter {
-            get {
-                object obj = ResourceManager.GetObject("jupiter", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap LASTearth {
             get {
                 object obj = ResourceManager.GetObject("LASTearth", resourceCulture);
@@ -266,46 +256,6 @@ namespace SpaceJourney.Properties {
         internal static System.Drawing.Bitmap LASTvenus {
             get {
                 object obj = ResourceManager.GetObject("LASTvenus", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap mars {
-            get {
-                object obj = ResourceManager.GetObject("mars", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap neptune {
-            get {
-                object obj = ResourceManager.GetObject("neptune", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap saturn {
-            get {
-                object obj = ResourceManager.GetObject("saturn", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sun {
-            get {
-                object obj = ResourceManager.GetObject("sun", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -403,9 +353,9 @@ namespace SpaceJourney.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tearrth {
+        internal static System.Drawing.Bitmap WEBMETKAearth {
             get {
-                object obj = ResourceManager.GetObject("tearrth", resourceCulture);
+                object obj = ResourceManager.GetObject("WEBMETKAearth", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -413,9 +363,9 @@ namespace SpaceJourney.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tesmercury {
+        internal static System.Drawing.Bitmap WEBMETKAjupiter {
             get {
-                object obj = ResourceManager.GetObject("tesmercury", resourceCulture);
+                object obj = ResourceManager.GetObject("WEBMETKAjupiter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -423,9 +373,9 @@ namespace SpaceJourney.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap turaan {
+        internal static System.Drawing.Bitmap WEBMETKAmars {
             get {
-                object obj = ResourceManager.GetObject("turaan", resourceCulture);
+                object obj = ResourceManager.GetObject("WEBMETKAmars", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -433,9 +383,59 @@ namespace SpaceJourney.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap venus {
+        internal static System.Drawing.Bitmap WEBMETKAmercury {
             get {
-                object obj = ResourceManager.GetObject("venus", resourceCulture);
+                object obj = ResourceManager.GetObject("WEBMETKAmercury", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WEBMETKAneptune {
+            get {
+                object obj = ResourceManager.GetObject("WEBMETKAneptune", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WEBMETKAsaturn {
+            get {
+                object obj = ResourceManager.GetObject("WEBMETKAsaturn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WEBMETKAsun {
+            get {
+                object obj = ResourceManager.GetObject("WEBMETKAsun", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WEBMETKAuran {
+            get {
+                object obj = ResourceManager.GetObject("WEBMETKAuran", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WEBMETKAvenus {
+            get {
+                object obj = ResourceManager.GetObject("WEBMETKAvenus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

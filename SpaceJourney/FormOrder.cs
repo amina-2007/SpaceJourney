@@ -170,17 +170,21 @@ namespace SpaceJourney
 
         private void BTNSadlySave_Click(object sender, EventArgs e)
         {
-            using(StreamWriter sw = new StreamWriter("orderdata.txt"))
+            if (File.Exists("orderdata.txt"))
             {
-                foreach (DataGridViewRow row in dataGridOrders.Rows)
+                using (StreamWriter sw = new StreamWriter("orderdata.txt"))
                 {
-                    if (row.IsNewRow==false)
+                    foreach (DataGridViewRow row in dataGridOrders.Rows)
                     {
-                        sw.WriteLine($"{row.Cells["ColumnName"].Value}#{row.Cells["ColumnPhone"].Value}#{row.Cells["ColumnSnils"].Value}#{row.Cells["ColumnRocket"].Value}#{row.Cells["ColumnPlanet"].Value}");
+                        if (row.IsNewRow == false)
+                        {
+                            sw.WriteLine($"{row.Cells["ColumnName"].Value}#{row.Cells["ColumnPhone"].Value}#{row.Cells["ColumnSnils"].Value}#{row.Cells["ColumnRocket"].Value}#{row.Cells["ColumnPlanet"].Value}");
+                        }
                     }
                 }
+                labelSomeText.Text = "Данные сохранены.";
             }
-            labelSomeText.Text = "Данные сохранены.";
+            else { using (File.Create("orderdata.txt")) { }; }
         } 
 
         private void buttonSadlyLoad_Click(object sender, EventArgs e)

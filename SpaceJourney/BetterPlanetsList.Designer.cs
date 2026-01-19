@@ -52,7 +52,6 @@
             // buttonMercury
             // 
             this.buttonMercury.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMercury.BackgroundImage = global::SpaceJourney.Properties.Resources.tesmercury;
             this.buttonMercury.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonMercury.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMercury.Location = new System.Drawing.Point(50, 45);
@@ -66,7 +65,6 @@
             // buttonNeptune
             // 
             this.buttonNeptune.BackColor = System.Drawing.Color.Transparent;
-            this.buttonNeptune.BackgroundImage = global::SpaceJourney.Properties.Resources.neptune;
             this.buttonNeptune.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonNeptune.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNeptune.Location = new System.Drawing.Point(645, 625);
@@ -80,7 +78,6 @@
             // buttonUranus
             // 
             this.buttonUranus.BackColor = System.Drawing.Color.Transparent;
-            this.buttonUranus.BackgroundImage = global::SpaceJourney.Properties.Resources.turaan;
             this.buttonUranus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonUranus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUranus.Location = new System.Drawing.Point(342, 632);
@@ -94,7 +91,6 @@
             // buttonJupiter
             // 
             this.buttonJupiter.BackColor = System.Drawing.Color.Transparent;
-            this.buttonJupiter.BackgroundImage = global::SpaceJourney.Properties.Resources.jupiter;
             this.buttonJupiter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonJupiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonJupiter.Location = new System.Drawing.Point(645, 318);
@@ -108,7 +104,6 @@
             // buttonSun
             // 
             this.buttonSun.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSun.BackgroundImage = global::SpaceJourney.Properties.Resources.sun;
             this.buttonSun.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonSun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSun.Location = new System.Drawing.Point(330, 307);
@@ -122,7 +117,6 @@
             // buttonSaturn
             // 
             this.buttonSaturn.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSaturn.BackgroundImage = global::SpaceJourney.Properties.Resources.saturn;
             this.buttonSaturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonSaturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSaturn.Location = new System.Drawing.Point(1, 611);
@@ -136,7 +130,6 @@
             // buttonMars
             // 
             this.buttonMars.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMars.BackgroundImage = global::SpaceJourney.Properties.Resources.mars;
             this.buttonMars.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonMars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMars.Location = new System.Drawing.Point(12, 307);
@@ -150,7 +143,6 @@
             // buttonEatth
             // 
             this.buttonEatth.BackColor = System.Drawing.Color.Transparent;
-            this.buttonEatth.BackgroundImage = global::SpaceJourney.Properties.Resources.tearrth;
             this.buttonEatth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonEatth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEatth.Location = new System.Drawing.Point(633, 12);
@@ -164,7 +156,6 @@
             // buttonVenus
             // 
             this.buttonVenus.BackColor = System.Drawing.Color.Transparent;
-            this.buttonVenus.BackgroundImage = global::SpaceJourney.Properties.Resources.venus;
             this.buttonVenus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonVenus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVenus.Location = new System.Drawing.Point(342, 22);

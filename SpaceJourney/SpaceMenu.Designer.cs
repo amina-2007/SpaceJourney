@@ -53,7 +53,7 @@ namespace SpaceJourney
             // BTNSun
             // 
             this.BTNSun.BackColor = System.Drawing.Color.Transparent;
-            this.BTNSun.BackgroundImage = global::SpaceJourney.Properties.Resources.sun;
+            this.BTNSun.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAsun;
             this.BTNSun.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTNSun.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.BTNSun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -68,7 +68,7 @@ namespace SpaceJourney
             // BTNMercury
             // 
             this.BTNMercury.BackColor = System.Drawing.Color.Transparent;
-            this.BTNMercury.BackgroundImage = global::SpaceJourney.Properties.Resources.tesmercury;
+            this.BTNMercury.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAmercury;
             this.BTNMercury.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTNMercury.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.BTNMercury.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -83,7 +83,7 @@ namespace SpaceJourney
             // BTNEarth
             // 
             this.BTNEarth.BackColor = System.Drawing.Color.Transparent;
-            this.BTNEarth.BackgroundImage = global::SpaceJourney.Properties.Resources.tearrth;
+            this.BTNEarth.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAearth;
             this.BTNEarth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTNEarth.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.BTNEarth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -98,7 +98,7 @@ namespace SpaceJourney
             // BTNJupiter
             // 
             this.BTNJupiter.BackColor = System.Drawing.Color.Transparent;
-            this.BTNJupiter.BackgroundImage = global::SpaceJourney.Properties.Resources.jupiter;
+            this.BTNJupiter.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAjupiter;
             this.BTNJupiter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTNJupiter.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.BTNJupiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -113,7 +113,7 @@ namespace SpaceJourney
             // BTNMars
             // 
             this.BTNMars.BackColor = System.Drawing.Color.Transparent;
-            this.BTNMars.BackgroundImage = global::SpaceJourney.Properties.Resources.mars;
+            this.BTNMars.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAmars;
             this.BTNMars.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTNMars.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.BTNMars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -128,7 +128,7 @@ namespace SpaceJourney
             // BTNVenus
             // 
             this.BTNVenus.BackColor = System.Drawing.Color.Transparent;
-            this.BTNVenus.BackgroundImage = global::SpaceJourney.Properties.Resources.venus;
+            this.BTNVenus.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAvenus;
             this.BTNVenus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTNVenus.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.BTNVenus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -143,13 +143,13 @@ namespace SpaceJourney
             // BTNSaturn
             // 
             this.BTNSaturn.BackColor = System.Drawing.Color.Transparent;
-            this.BTNSaturn.BackgroundImage = global::SpaceJourney.Properties.Resources.saturn;
+            this.BTNSaturn.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAsaturn;
             this.BTNSaturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTNSaturn.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.BTNSaturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNSaturn.Location = new System.Drawing.Point(996, 317);
+            this.BTNSaturn.Location = new System.Drawing.Point(991, 317);
             this.BTNSaturn.Name = "BTNSaturn";
-            this.BTNSaturn.Size = new System.Drawing.Size(41, 42);
+            this.BTNSaturn.Size = new System.Drawing.Size(54, 42);
             this.BTNSaturn.TabIndex = 6;
             this.BTNSaturn.Text = " ";
             this.BTNSaturn.UseVisualStyleBackColor = false;
@@ -158,7 +158,7 @@ namespace SpaceJourney
             // BTNUranus
             // 
             this.BTNUranus.BackColor = System.Drawing.Color.Transparent;
-            this.BTNUranus.BackgroundImage = global::SpaceJourney.Properties.Resources.turaan;
+            this.BTNUranus.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAuran;
             this.BTNUranus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTNUranus.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.BTNUranus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -173,7 +173,7 @@ namespace SpaceJourney
             // BTNNeptune
             // 
             this.BTNNeptune.BackColor = System.Drawing.Color.Transparent;
-            this.BTNNeptune.BackgroundImage = global::SpaceJourney.Properties.Resources.neptune;
+            this.BTNNeptune.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAneptune;
             this.BTNNeptune.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTNNeptune.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.BTNNeptune.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
