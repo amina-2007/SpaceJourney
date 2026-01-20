@@ -382,6 +382,7 @@
             this.Controls.Add(this.dataGridOrders);
             this.Name = "FormOrder";
             this.Text = "FormOrder";
+            this.Load += new System.EventHandler(this.FormOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridOrders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -52,6 +52,7 @@
             // buttonMercury
             // 
             this.buttonMercury.BackColor = System.Drawing.Color.Transparent;
+            this.buttonMercury.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAmercury;
             this.buttonMercury.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonMercury.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMercury.Location = new System.Drawing.Point(50, 45);
@@ -65,6 +66,8 @@
             // buttonNeptune
             // 
             this.buttonNeptune.BackColor = System.Drawing.Color.Transparent;
+            this.buttonNeptune.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAneptune;
+
             this.buttonNeptune.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonNeptune.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNeptune.Location = new System.Drawing.Point(645, 625);
@@ -77,6 +80,8 @@
             // 
             // buttonUranus
             // 
+            this.buttonUranus.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAuran;
+
             this.buttonUranus.BackColor = System.Drawing.Color.Transparent;
             this.buttonUranus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonUranus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -90,6 +95,8 @@
             // 
             // buttonJupiter
             // 
+            this.buttonJupiter.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAjupiter;
+
             this.buttonJupiter.BackColor = System.Drawing.Color.Transparent;
             this.buttonJupiter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonJupiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -103,6 +110,8 @@
             // 
             // buttonSun
             // 
+            this.buttonSun.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAsun;
+
             this.buttonSun.BackColor = System.Drawing.Color.Transparent;
             this.buttonSun.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonSun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -116,6 +125,8 @@
             // 
             // buttonSaturn
             // 
+            this.buttonSaturn.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAsaturn;
+
             this.buttonSaturn.BackColor = System.Drawing.Color.Transparent;
             this.buttonSaturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonSaturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -129,6 +140,8 @@
             // 
             // buttonMars
             // 
+            this.buttonMars.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAmars;
+
             this.buttonMars.BackColor = System.Drawing.Color.Transparent;
             this.buttonMars.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonMars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -142,6 +155,8 @@
             // 
             // buttonEatth
             // 
+            this.buttonEatth.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAearth;
+
             this.buttonEatth.BackColor = System.Drawing.Color.Transparent;
             this.buttonEatth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonEatth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -155,6 +170,8 @@
             // 
             // buttonVenus
             // 
+            this.buttonVenus.BackgroundImage = global::SpaceJourney.Properties.Resources.WEBMETKAvenus;
+
             this.buttonVenus.BackColor = System.Drawing.Color.Transparent;
             this.buttonVenus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonVenus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

@@ -214,6 +214,9 @@ namespace SpaceJourney
 
         }
 
-         
+        private void FormOrder_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
